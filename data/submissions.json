@@ -1,0 +1,410 @@
+[
+  {
+    "id": "sub-01",
+    "studentId": "stu-01",
+    "testId": "career-personality",
+    "status": "completed",
+    "startedAt": "2026-11-18T09:15:00",
+    "completedAt": "2026-11-18T09:29:00",
+    "answers": { "cp-01": 4, "cp-02": 5, "cp-06": 4, "cp-14": 5, "cp-26": 5 },
+    "riasecScores": { "R": 72, "I": 91, "A": 38, "S": 34, "E": 42, "C": 68 },
+    "topCareers": [
+      { "id": "career-software-dev", "title": "Software Developer", "match": 93 },
+      { "id": "career-cybersecurity", "title": "Cybersecurity Analyst", "match": 90 },
+      { "id": "career-data-analyst", "title": "Data Analyst", "match": 86 }
+    ],
+    "counsellorNotes": "Strong analytical and technical curiosity. Recommended exploring Computer Science and Robotics club.",
+    "isDemo": true
+  },
+  {
+    "id": "sub-02",
+    "studentId": "stu-01",
+    "testId": "career-discovery",
+    "status": "completed",
+    "startedAt": "2026-11-19T10:10:00",
+    "completedAt": "2026-11-19T10:24:00",
+    "answers": { "cd-01": ["Computer Science", "Mathematics & Statistics"], "cd-17": 5 },
+    "riasecScores": { "R": 69, "I": 89, "A": 35, "S": 36, "E": 45, "C": 71 },
+    "topCareers": [
+      { "id": "career-software-dev", "title": "Software Developer", "match": 92 },
+      { "id": "career-data-analyst", "title": "Data Analyst", "match": 87 },
+      { "id": "career-cybersecurity", "title": "Cybersecurity Analyst", "match": 86 }
+    ],
+    "counsellorNotes": "Consistent software and analytical alignment across multiple quizzes.",
+    "isDemo": true
+  },
+  {
+    "id": "sub-03",
+    "studentId": "stu-02",
+    "testId": "career-personality",
+    "status": "completed",
+    "startedAt": "2026-11-17T11:00:00",
+    "completedAt": "2026-11-17T11:15:00",
+    "answers": { "cp-04": 5, "cp-10": 3, "cp-22": 5, "cp-26": 5, "cp-27": 5 },
+    "riasecScores": { "R": 44, "I": 84, "A": 42, "S": 92, "E": 40, "C": 52 },
+    "topCareers": [
+      { "id": "career-doctor", "title": "Doctor / Physician", "match": 94 },
+      { "id": "career-psychologist", "title": "Psychologist", "match": 91 },
+      { "id": "career-pharmacist", "title": "Pharmacist", "match": 85 }
+    ],
+    "counsellorNotes": "Strong balance of empathy and scientific curiosity—ideal for Medicine or Psychology.",
+    "isDemo": true
+  },
+  {
+    "id": "sub-04",
+    "studentId": "stu-02",
+    "testId": "career-discovery",
+    "status": "completed",
+    "startedAt": "2026-11-18T14:20:00",
+    "completedAt": "2026-11-18T14:35:00",
+    "answers": { "cd-01": ["Biology & Chemistry"], "cd-18": 5, "cd-20": 5 },
+    "riasecScores": { "R": 41, "I": 82, "A": 45, "S": 90, "E": 38, "C": 49 },
+    "topCareers": [
+      { "id": "career-psychologist", "title": "Psychologist", "match": 92 },
+      { "id": "career-doctor", "title": "Doctor / Physician", "match": 90 },
+      { "id": "career-teacher", "title": "Teacher / Educator", "match": 81 }
+    ],
+    "counsellorNotes": "Open to long-term university medical/clinical study.",
+    "isDemo": true
+  },
+  {
+    "id": "sub-05",
+    "studentId": "stu-03",
+    "testId": "photo-career-quiz",
+    "status": "completed",
+    "startedAt": "2026-11-19T08:40:00",
+    "completedAt": "2026-11-19T08:52:00",
+    "answers": { "pq-01": 2, "pq-02": 2, "pq-17": 2 },
+    "riasecScores": { "R": 91, "I": 76, "A": 34, "S": 28, "E": 41, "C": 62 },
+    "topCareers": [
+      { "id": "career-mechanical-engineer", "title": "Mechanical Engineer", "match": 95 },
+      { "id": "career-civil-engineer", "title": "Civil Engineer", "match": 88 },
+      { "id": "career-software-dev", "title": "Software Developer", "match": 82 }
+    ],
+    "counsellorNotes": "Strong preference for hands-on mechanical and engineering environments.",
+    "isDemo": true
+  },
+  {
+    "id": "sub-06",
+    "studentId": "stu-03",
+    "testId": "career-discovery",
+    "status": "completed",
+    "startedAt": "2026-11-20T09:00:00",
+    "completedAt": "2026-11-20T09:14:00",
+    "answers": { "cd-01": ["Physics & Technology", "Mathematics & Statistics"], "cd-06": 3 },
+    "riasecScores": { "R": 89, "I": 73, "A": 31, "S": 26, "E": 38, "C": 58 },
+    "topCareers": [
+      { "id": "career-mechanical-engineer", "title": "Mechanical Engineer", "match": 93 },
+      { "id": "career-civil-engineer", "title": "Civil Engineer", "match": 87 },
+      { "id": "career-cybersecurity", "title": "Cybersecurity Analyst", "match": 80 }
+    ],
+    "counsellorNotes": "",
+    "isDemo": true
+  },
+  {
+    "id": "sub-07",
+    "studentId": "stu-04",
+    "testId": "photo-career-quiz",
+    "status": "completed",
+    "startedAt": "2026-11-20T10:15:00",
+    "completedAt": "2026-11-20T10:27:00",
+    "answers": { "pq-07": 2, "pq-08": 2, "pq-16": 2 },
+    "riasecScores": { "R": 36, "I": 54, "A": 94, "S": 58, "E": 62, "C": 33 },
+    "topCareers": [
+      { "id": "career-graphic-designer", "title": "Graphic Designer", "match": 95 },
+      { "id": "career-ux-designer", "title": "UX / UI Designer", "match": 91 },
+      { "id": "career-content-creator", "title": "Content Creator", "match": 88 }
+    ],
+    "counsellorNotes": "Recommend building a visual design portfolio before senior year.",
+    "isDemo": true
+  },
+  {
+    "id": "sub-08",
+    "studentId": "stu-04",
+    "testId": "career-personality",
+    "status": "completed",
+    "startedAt": "2026-11-21T08:30:00",
+    "completedAt": "2026-11-21T08:44:00",
+    "answers": { "cp-03": 5, "cp-09": 3, "cp-23": 5 },
+    "riasecScores": { "R": 38, "I": 56, "A": 92, "S": 54, "E": 60, "C": 35 },
+    "topCareers": [
+      { "id": "career-graphic-designer", "title": "Graphic Designer", "match": 94 },
+      { "id": "career-ux-designer", "title": "UX / UI Designer", "match": 90 },
+      { "id": "career-architect", "title": "Architect", "match": 83 }
+    ],
+    "counsellorNotes": "",
+    "isDemo": true
+  },
+  {
+    "id": "sub-09",
+    "studentId": "stu-05",
+    "testId": "career-personality",
+    "status": "completed",
+    "startedAt": "2026-11-16T10:00:00",
+    "completedAt": "2026-11-16T10:15:00",
+    "answers": { "cp-05": 5, "cp-06": 5, "cp-11": 3, "cp-12": 3, "cp-24": 5 },
+    "riasecScores": { "R": 30, "I": 58, "A": 34, "S": 61, "E": 88, "C": 85 },
+    "topCareers": [
+      { "id": "career-business-manager", "title": "Business Manager", "match": 94 },
+      { "id": "career-project-manager", "title": "Project Manager", "match": 91 },
+      { "id": "career-finance-specialist", "title": "Finance Specialist", "match": 89 }
+    ],
+    "counsellorNotes": "Strong leadership + organizational blend.",
+    "isDemo": true
+  },
+  {
+    "id": "sub-10",
+    "studentId": "stu-05",
+    "testId": "career-discovery",
+    "status": "completed",
+    "startedAt": "2026-11-19T12:00:00",
+    "completedAt": "2026-11-19T12:14:00",
+    "answers": { "cd-01": ["Accounting, Economics & Business"], "cd-10": 3, "cd-11": 3 },
+    "riasecScores": { "R": 28, "I": 56, "A": 36, "S": 64, "E": 90, "C": 83 },
+    "topCareers": [
+      { "id": "career-business-manager", "title": "Business Manager", "match": 95 },
+      { "id": "career-finance-specialist", "title": "Finance Specialist", "match": 90 },
+      { "id": "career-accountant", "title": "Accountant", "match": 86 }
+    ],
+    "counsellorNotes": "",
+    "isDemo": true
+  },
+  {
+    "id": "sub-11",
+    "studentId": "stu-06",
+    "testId": "photo-career-quiz",
+    "status": "completed",
+    "startedAt": "2026-11-21T09:15:00",
+    "completedAt": "2026-11-21T09:28:00",
+    "answers": { "pq-09": 2, "pq-20": 2, "pq-03": 2 },
+    "riasecScores": { "R": 82, "I": 79, "A": 35, "S": 56, "E": 34, "C": 44 },
+    "topCareers": [
+      { "id": "career-environmental-scientist", "title": "Environmental Scientist", "match": 93 },
+      { "id": "career-veterinarian", "title": "Veterinarian", "match": 89 },
+      { "id": "career-research-scientist", "title": "Research Scientist", "match": 82 }
+    ],
+    "counsellorNotes": "Strong outdoor and ecological curiosity.",
+    "isDemo": true
+  },
+  {
+    "id": "sub-12",
+    "studentId": "stu-07",
+    "testId": "career-discovery",
+    "status": "completed",
+    "startedAt": "2026-11-16T11:20:00",
+    "completedAt": "2026-11-16T11:36:00",
+    "answers": { "cd-01": ["Physics & Technology", "Mathematics & Statistics"] },
+    "riasecScores": { "R": 84, "I": 79, "A": 59, "S": 33, "E": 42, "C": 66 },
+    "topCareers": [
+      { "id": "career-civil-engineer", "title": "Civil Engineer", "match": 92 },
+      { "id": "career-mechanical-engineer", "title": "Mechanical Engineer", "match": 89 },
+      { "id": "career-architect", "title": "Architect", "match": 86 }
+    ],
+    "counsellorNotes": "Strong spatial and engineering interest.",
+    "isDemo": true
+  },
+  {
+    "id": "sub-13",
+    "studentId": "stu-08",
+    "testId": "career-personality",
+    "status": "completed",
+    "startedAt": "2026-11-20T13:10:00",
+    "completedAt": "2026-11-20T13:26:00",
+    "answers": { "cp-03": 4, "cp-05": 5, "cp-18": 5 },
+    "riasecScores": { "R": 22, "I": 64, "A": 71, "S": 74, "E": 89, "C": 45 },
+    "topCareers": [
+      { "id": "career-lawyer", "title": "Lawyer", "match": 94 },
+      { "id": "career-journalist", "title": "Journalist", "match": 89 },
+      { "id": "career-marketing", "title": "Marketing Specialist", "match": 85 }
+    ],
+    "counsellorNotes": "Debating talent aligns strongly with Law and Media Journalism.",
+    "isDemo": true
+  },
+  {
+    "id": "sub-14",
+    "studentId": "stu-08",
+    "testId": "photo-career-quiz",
+    "status": "completed",
+    "startedAt": "2026-11-21T08:50:00",
+    "completedAt": "2026-11-21T09:02:00",
+    "answers": { "pq-19": 2, "pq-14": 2, "pq-18": 2 },
+    "riasecScores": { "R": 20, "I": 60, "A": 74, "S": 71, "E": 91, "C": 42 },
+    "topCareers": [
+      { "id": "career-lawyer", "title": "Lawyer", "match": 93 },
+      { "id": "career-journalist", "title": "Journalist", "match": 91 },
+      { "id": "career-marketing", "title": "Marketing Specialist", "match": 86 }
+    ],
+    "counsellorNotes": "",
+    "isDemo": true
+  },
+  {
+    "id": "sub-15",
+    "studentId": "stu-09",
+    "testId": "career-discovery",
+    "status": "completed",
+    "startedAt": "2026-11-13T11:15:00",
+    "completedAt": "2026-11-13T11:32:00",
+    "answers": { "cd-01": ["Mathematics & Statistics", "Computer Science"], "cd-14": 5 },
+    "riasecScores": { "R": 42, "I": 88, "A": 30, "S": 34, "E": 44, "C": 85 },
+    "topCareers": [
+      { "id": "career-data-analyst", "title": "Data Analyst", "match": 95 },
+      { "id": "career-software-dev", "title": "Software Developer", "match": 89 },
+      { "id": "career-accountant", "title": "Accountant", "match": 85 }
+    ],
+    "counsellorNotes": "Strong quantitative and pattern-finding orientation.",
+    "isDemo": true
+  },
+  {
+    "id": "sub-16",
+    "studentId": "stu-10",
+    "testId": "photo-career-quiz",
+    "status": "completed",
+    "startedAt": "2026-11-15T14:00:00",
+    "completedAt": "2026-11-15T14:11:00",
+    "answers": { "pq-01": 2, "pq-06": 2, "pq-17": 2 },
+    "riasecScores": { "R": 87, "I": 84, "A": 31, "S": 28, "E": 36, "C": 58 },
+    "topCareers": [
+      { "id": "career-mechanical-engineer", "title": "Mechanical Engineer", "match": 92 },
+      { "id": "career-cybersecurity", "title": "Cybersecurity Analyst", "match": 88 },
+      { "id": "career-software-dev", "title": "Software Developer", "match": 85 }
+    ],
+    "counsellorNotes": "",
+    "isDemo": true
+  },
+  {
+    "id": "sub-17",
+    "studentId": "stu-11",
+    "testId": "career-personality",
+    "status": "completed",
+    "startedAt": "2026-11-11T11:30:00",
+    "completedAt": "2026-11-11T11:45:00",
+    "answers": { "cp-02": 5, "cp-06": 4, "cp-08": 3, "cp-26": 5 },
+    "riasecScores": { "R": 46, "I": 87, "A": 38, "S": 76, "E": 36, "C": 69 },
+    "topCareers": [
+      { "id": "career-pharmacist", "title": "Pharmacist", "match": 93 },
+      { "id": "career-doctor", "title": "Doctor / Physician", "match": 89 },
+      { "id": "career-research-scientist", "title": "Research Scientist", "match": 87 }
+    ],
+    "counsellorNotes": "Strong laboratory precision—Pharm-D and Medical Research fit well.",
+    "isDemo": true
+  },
+  {
+    "id": "sub-18",
+    "studentId": "stu-12",
+    "testId": "career-personality",
+    "status": "completed",
+    "startedAt": "2026-11-21T09:05:00",
+    "completedAt": "2026-11-21T09:20:00",
+    "answers": { "cp-05": 5, "cp-11": 3, "cp-18": 5, "cp-24": 5 },
+    "riasecScores": { "R": 54, "I": 51, "A": 72, "S": 55, "E": 91, "C": 49 },
+    "topCareers": [
+      { "id": "career-entrepreneur", "title": "Entrepreneur", "match": 95 },
+      { "id": "career-marketing", "title": "Marketing Specialist", "match": 89 },
+      { "id": "career-business-manager", "title": "Business Manager", "match": 87 }
+    ],
+    "counsellorNotes": "Encourage joining entrepreneurship & student business club.",
+    "isDemo": true
+  },
+  {
+    "id": "sub-19",
+    "studentId": "stu-13",
+    "testId": "career-discovery",
+    "status": "completed",
+    "startedAt": "2026-11-09T11:00:00",
+    "completedAt": "2026-11-09T11:16:00",
+    "answers": { "cd-01": ["Art, Design & English / Literature"], "cd-08": 3 },
+    "riasecScores": { "R": 22, "I": 50, "A": 88, "S": 77, "E": 48, "C": 43 },
+    "topCareers": [
+      { "id": "career-content-creator", "title": "Content Creator", "match": 91 },
+      { "id": "career-teacher", "title": "Teacher / Educator", "match": 89 },
+      { "id": "career-journalist", "title": "Journalist", "match": 86 }
+    ],
+    "counsellorNotes": "",
+    "isDemo": true
+  },
+  {
+    "id": "sub-20",
+    "studentId": "stu-14",
+    "testId": "photo-career-quiz",
+    "status": "completed",
+    "startedAt": "2026-11-06T12:10:00",
+    "completedAt": "2026-11-06T12:22:00",
+    "answers": { "pq-16": 2, "pq-07": 2, "pq-02": 2 },
+    "riasecScores": { "R": 75, "I": 71, "A": 89, "S": 36, "E": 45, "C": 52 },
+    "topCareers": [
+      { "id": "career-architect", "title": "Architect", "match": 95 },
+      { "id": "career-civil-engineer", "title": "Civil Engineer", "match": 84 },
+      { "id": "career-graphic-designer", "title": "Graphic Designer", "match": 83 }
+    ],
+    "counsellorNotes": "Strong spatial and architectural portfolio candidate.",
+    "isDemo": true
+  },
+  {
+    "id": "sub-21",
+    "studentId": "stu-15",
+    "testId": "career-personality",
+    "status": "completed",
+    "startedAt": "2026-11-04T11:40:00",
+    "completedAt": "2026-11-04T11:55:00",
+    "answers": { "cp-04": 5, "cp-10": 3, "cp-22": 5, "cp-27": 5 },
+    "riasecScores": { "R": 27, "I": 53, "A": 55, "S": 92, "E": 66, "C": 50 },
+    "topCareers": [
+      { "id": "career-social-worker", "title": "Social Worker", "match": 93 },
+      { "id": "career-teacher", "title": "Teacher / Educator", "match": 91 },
+      { "id": "career-psychologist", "title": "Psychologist", "match": 88 }
+    ],
+    "counsellorNotes": "Strong People/Social orientation; consider Education or Counselling.",
+    "isDemo": true
+  },
+  {
+    "id": "sub-22",
+    "studentId": "stu-16",
+    "testId": "career-discovery",
+    "status": "completed",
+    "startedAt": "2026-11-19T13:05:00",
+    "completedAt": "2026-11-19T13:23:00",
+    "answers": { "cd-01": ["Computer Science", "Physics & Technology"], "cd-17": 5 },
+    "riasecScores": { "R": 81, "I": 90, "A": 29, "S": 31, "E": 40, "C": 72 },
+    "topCareers": [
+      { "id": "career-cybersecurity", "title": "Cybersecurity Analyst", "match": 94 },
+      { "id": "career-software-dev", "title": "Software Developer", "match": 92 },
+      { "id": "career-data-analyst", "title": "Data Analyst", "match": 86 }
+    ],
+    "counsellorNotes": "Strong cybersecurity & systems aptitude.",
+    "isDemo": true
+  },
+  {
+    "id": "sub-23",
+    "studentId": "stu-09",
+    "testId": "photo-career-quiz",
+    "status": "completed",
+    "startedAt": "2026-11-14T10:15:00",
+    "completedAt": "2026-11-14T10:26:00",
+    "answers": { "pq-06": 2, "pq-12": 2, "pq-13": 2 },
+    "riasecScores": { "R": 44, "I": 88, "A": 28, "S": 32, "E": 46, "C": 87 },
+    "topCareers": [
+      { "id": "career-data-analyst", "title": "Data Analyst", "match": 96 },
+      { "id": "career-finance-specialist", "title": "Finance Specialist", "match": 90 },
+      { "id": "career-software-dev", "title": "Software Developer", "match": 88 }
+    ],
+    "counsellorNotes": "",
+    "isDemo": true
+  },
+  {
+    "id": "sub-24",
+    "studentId": "stu-12",
+    "testId": "photo-career-quiz",
+    "status": "completed",
+    "startedAt": "2026-11-21T10:12:00",
+    "completedAt": "2026-11-21T10:24:00",
+    "answers": { "pq-10": 2, "pq-11": 2, "pq-18": 2 },
+    "riasecScores": { "R": 48, "I": 49, "A": 68, "S": 52, "E": 89, "C": 46 },
+    "topCareers": [
+      { "id": "career-entrepreneur", "title": "Entrepreneur", "match": 93 },
+      { "id": "career-marketing", "title": "Marketing Specialist", "match": 88 },
+      { "id": "career-business-manager", "title": "Business Manager", "match": 85 }
+    ],
+    "counsellorNotes": "",
+    "isDemo": true
+  }
+]

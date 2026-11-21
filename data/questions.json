@@ -1,0 +1,2749 @@
+[
+  {
+    "id": "cp-01",
+    "testId": "career-personality",
+    "order": 1,
+    "type": "likert",
+    "text": "I enjoy building, fixing, or working directly with practical tools and machinery.",
+    "required": true,
+    "options": [
+      {
+        "label": "Strongly Disagree",
+        "value": 1
+      },
+      {
+        "label": "Disagree",
+        "value": 2
+      },
+      {
+        "label": "Neutral",
+        "value": 3
+      },
+      {
+        "label": "Agree",
+        "value": 4
+      },
+      {
+        "label": "Strongly Agree",
+        "value": 5
+      }
+    ],
+    "categoryWeights": {
+      "R": 3,
+      "I": 1,
+      "A": 0,
+      "S": 0,
+      "E": 0,
+      "C": 0
+    }
+  },
+  {
+    "id": "cp-02",
+    "testId": "career-personality",
+    "order": 2,
+    "type": "likert",
+    "text": "I enjoy solving complex puzzles and investigating how things work beneath the surface.",
+    "required": true,
+    "options": [
+      {
+        "label": "Strongly Disagree",
+        "value": 1
+      },
+      {
+        "label": "Disagree",
+        "value": 2
+      },
+      {
+        "label": "Neutral",
+        "value": 3
+      },
+      {
+        "label": "Agree",
+        "value": 4
+      },
+      {
+        "label": "Strongly Agree",
+        "value": 5
+      }
+    ],
+    "categoryWeights": {
+      "R": 0,
+      "I": 3,
+      "A": 0,
+      "S": 0,
+      "E": 0,
+      "C": 1
+    }
+  },
+  {
+    "id": "cp-03",
+    "testId": "career-personality",
+    "order": 3,
+    "type": "likert",
+    "text": "Creating original artwork, designs, stories, or digital media gives me energy.",
+    "required": true,
+    "options": [
+      {
+        "label": "Strongly Disagree",
+        "value": 1
+      },
+      {
+        "label": "Disagree",
+        "value": 2
+      },
+      {
+        "label": "Neutral",
+        "value": 3
+      },
+      {
+        "label": "Agree",
+        "value": 4
+      },
+      {
+        "label": "Strongly Agree",
+        "value": 5
+      }
+    ],
+    "categoryWeights": {
+      "R": 0,
+      "I": 0,
+      "A": 3,
+      "S": 0,
+      "E": 0,
+      "C": 0
+    }
+  },
+  {
+    "id": "cp-04",
+    "testId": "career-personality",
+    "order": 4,
+    "type": "likert",
+    "text": "I feel fulfilled when mentoring classmates, teaching new skills, or supporting someone who needs help.",
+    "required": true,
+    "options": [
+      {
+        "label": "Strongly Disagree",
+        "value": 1
+      },
+      {
+        "label": "Disagree",
+        "value": 2
+      },
+      {
+        "label": "Neutral",
+        "value": 3
+      },
+      {
+        "label": "Agree",
+        "value": 4
+      },
+      {
+        "label": "Strongly Agree",
+        "value": 5
+      }
+    ],
+    "categoryWeights": {
+      "R": 0,
+      "I": 0,
+      "A": 0,
+      "S": 3,
+      "E": 0,
+      "C": 0
+    }
+  },
+  {
+    "id": "cp-05",
+    "testId": "career-personality",
+    "order": 5,
+    "type": "likert",
+    "text": "I naturally step forward to lead group projects, pitch ideas, or persuade others.",
+    "required": true,
+    "options": [
+      {
+        "label": "Strongly Disagree",
+        "value": 1
+      },
+      {
+        "label": "Disagree",
+        "value": 2
+      },
+      {
+        "label": "Neutral",
+        "value": 3
+      },
+      {
+        "label": "Agree",
+        "value": 4
+      },
+      {
+        "label": "Strongly Agree",
+        "value": 5
+      }
+    ],
+    "categoryWeights": {
+      "R": 0,
+      "I": 0,
+      "A": 0,
+      "S": 1,
+      "E": 3,
+      "C": 0
+    }
+  },
+  {
+    "id": "cp-06",
+    "testId": "career-personality",
+    "order": 6,
+    "type": "likert",
+    "text": "I value high accuracy, organized records, and following clear step-by-step procedures.",
+    "required": true,
+    "options": [
+      {
+        "label": "Strongly Disagree",
+        "value": 1
+      },
+      {
+        "label": "Disagree",
+        "value": 2
+      },
+      {
+        "label": "Neutral",
+        "value": 3
+      },
+      {
+        "label": "Agree",
+        "value": 4
+      },
+      {
+        "label": "Strongly Agree",
+        "value": 5
+      }
+    ],
+    "categoryWeights": {
+      "R": 0,
+      "I": 0,
+      "A": 0,
+      "S": 0,
+      "E": 0,
+      "C": 3
+    }
+  },
+  {
+    "id": "cp-07",
+    "testId": "career-personality",
+    "order": 7,
+    "type": "interest_scale",
+    "text": "Working outdoors with plants, animals, nature, or physical environments.",
+    "required": true,
+    "options": [
+      {
+        "label": "Not interested",
+        "value": 0
+      },
+      {
+        "label": "Slightly interested",
+        "value": 1
+      },
+      {
+        "label": "Interested",
+        "value": 2
+      },
+      {
+        "label": "Very interested",
+        "value": 3
+      }
+    ],
+    "categoryWeights": {
+      "R": 3,
+      "I": 1,
+      "A": 0,
+      "S": 0,
+      "E": 0,
+      "C": 0
+    }
+  },
+  {
+    "id": "cp-08",
+    "testId": "career-personality",
+    "order": 8,
+    "type": "interest_scale",
+    "text": "Conducting scientific experiments, testing hypotheses, and analyzing data patterns.",
+    "required": true,
+    "options": [
+      {
+        "label": "Not interested",
+        "value": 0
+      },
+      {
+        "label": "Slightly interested",
+        "value": 1
+      },
+      {
+        "label": "Interested",
+        "value": 2
+      },
+      {
+        "label": "Very interested",
+        "value": 3
+      }
+    ],
+    "categoryWeights": {
+      "R": 0,
+      "I": 3,
+      "A": 0,
+      "S": 0,
+      "E": 0,
+      "C": 1
+    }
+  },
+  {
+    "id": "cp-09",
+    "testId": "career-personality",
+    "order": 9,
+    "type": "interest_scale",
+    "text": "Designing websites, posters, videos, or creative visual experiences.",
+    "required": true,
+    "options": [
+      {
+        "label": "Not interested",
+        "value": 0
+      },
+      {
+        "label": "Slightly interested",
+        "value": 1
+      },
+      {
+        "label": "Interested",
+        "value": 2
+      },
+      {
+        "label": "Very interested",
+        "value": 3
+      }
+    ],
+    "categoryWeights": {
+      "R": 0,
+      "I": 0,
+      "A": 3,
+      "S": 0,
+      "E": 1,
+      "C": 0
+    }
+  },
+  {
+    "id": "cp-10",
+    "testId": "career-personality",
+    "order": 10,
+    "type": "interest_scale",
+    "text": "Caring for patients, supporting children, or helping people work through personal challenges.",
+    "required": true,
+    "options": [
+      {
+        "label": "Not interested",
+        "value": 0
+      },
+      {
+        "label": "Slightly interested",
+        "value": 1
+      },
+      {
+        "label": "Interested",
+        "value": 2
+      },
+      {
+        "label": "Very interested",
+        "value": 3
+      }
+    ],
+    "categoryWeights": {
+      "R": 0,
+      "I": 1,
+      "A": 0,
+      "S": 3,
+      "E": 0,
+      "C": 0
+    }
+  },
+  {
+    "id": "cp-11",
+    "testId": "career-personality",
+    "order": 11,
+    "type": "interest_scale",
+    "text": "Starting a small business, organizing events, or leading a commercial team.",
+    "required": true,
+    "options": [
+      {
+        "label": "Not interested",
+        "value": 0
+      },
+      {
+        "label": "Slightly interested",
+        "value": 1
+      },
+      {
+        "label": "Interested",
+        "value": 2
+      },
+      {
+        "label": "Very interested",
+        "value": 3
+      }
+    ],
+    "categoryWeights": {
+      "R": 0,
+      "I": 0,
+      "A": 1,
+      "S": 0,
+      "E": 3,
+      "C": 1
+    }
+  },
+  {
+    "id": "cp-12",
+    "testId": "career-personality",
+    "order": 12,
+    "type": "interest_scale",
+    "text": "Managing budgets, organizing schedules, and checking numerical spreadsheets for errors.",
+    "required": true,
+    "options": [
+      {
+        "label": "Not interested",
+        "value": 0
+      },
+      {
+        "label": "Slightly interested",
+        "value": 1
+      },
+      {
+        "label": "Interested",
+        "value": 2
+      },
+      {
+        "label": "Very interested",
+        "value": 3
+      }
+    ],
+    "categoryWeights": {
+      "R": 0,
+      "I": 1,
+      "A": 0,
+      "S": 0,
+      "E": 0,
+      "C": 3
+    }
+  },
+  {
+    "id": "cp-13",
+    "testId": "career-personality",
+    "order": 13,
+    "type": "single_choice",
+    "text": "During a group school project, which role feels most natural to you?",
+    "required": true,
+    "options": [
+      {
+        "label": "Building the working model or setting up the technical gear",
+        "value": 5,
+        "weights": {
+          "R": 3,
+          "I": 1
+        }
+      },
+      {
+        "label": "Researching the facts, testing ideas, and checking accuracy",
+        "value": 5,
+        "weights": {
+          "I": 3,
+          "C": 1
+        }
+      },
+      {
+        "label": "Designing the visual slides, layout, and creative theme",
+        "value": 5,
+        "weights": {
+          "A": 3,
+          "E": 1
+        }
+      },
+      {
+        "label": "Coordinating teammates, planning timelines, and presenting",
+        "value": 5,
+        "weights": {
+          "E": 3,
+          "S": 2
+        }
+      }
+    ],
+    "categoryWeights": {
+      "R": 1,
+      "I": 1,
+      "A": 1,
+      "S": 1,
+      "E": 1,
+      "C": 1
+    }
+  },
+  {
+    "id": "cp-14",
+    "testId": "career-personality",
+    "order": 14,
+    "type": "likert",
+    "text": "I enjoy troubleshooting computers, learning software tools, and figuring out technical systems.",
+    "required": true,
+    "options": [
+      {
+        "label": "Strongly Disagree",
+        "value": 1
+      },
+      {
+        "label": "Disagree",
+        "value": 2
+      },
+      {
+        "label": "Neutral",
+        "value": 3
+      },
+      {
+        "label": "Agree",
+        "value": 4
+      },
+      {
+        "label": "Strongly Agree",
+        "value": 5
+      }
+    ],
+    "categoryWeights": {
+      "R": 2,
+      "I": 3,
+      "A": 0,
+      "S": 0,
+      "E": 0,
+      "C": 1
+    }
+  },
+  {
+    "id": "cp-15",
+    "testId": "career-personality",
+    "order": 15,
+    "type": "likert",
+    "text": "I enjoy writing stories, essays, poems, or thoughtful articles to express ideas.",
+    "required": true,
+    "options": [
+      {
+        "label": "Strongly Disagree",
+        "value": 1
+      },
+      {
+        "label": "Disagree",
+        "value": 2
+      },
+      {
+        "label": "Neutral",
+        "value": 3
+      },
+      {
+        "label": "Agree",
+        "value": 4
+      },
+      {
+        "label": "Strongly Agree",
+        "value": 5
+      }
+    ],
+    "categoryWeights": {
+      "R": 0,
+      "I": 1,
+      "A": 3,
+      "S": 0,
+      "E": 0,
+      "C": 0
+    }
+  },
+  {
+    "id": "cp-16",
+    "testId": "career-personality",
+    "order": 16,
+    "type": "likert",
+    "text": "I prefer collaborating closely with people rather than working alone all day.",
+    "required": true,
+    "options": [
+      {
+        "label": "Strongly Disagree",
+        "value": 1
+      },
+      {
+        "label": "Disagree",
+        "value": 2
+      },
+      {
+        "label": "Neutral",
+        "value": 3
+      },
+      {
+        "label": "Agree",
+        "value": 4
+      },
+      {
+        "label": "Strongly Agree",
+        "value": 5
+      }
+    ],
+    "categoryWeights": {
+      "R": 0,
+      "I": 0,
+      "A": 0,
+      "S": 3,
+      "E": 2,
+      "C": 0
+    }
+  },
+  {
+    "id": "cp-17",
+    "testId": "career-personality",
+    "order": 17,
+    "type": "likert",
+    "text": "I work best when I have quiet, uninterrupted time to think deeply through difficult questions.",
+    "required": true,
+    "options": [
+      {
+        "label": "Strongly Disagree",
+        "value": 1
+      },
+      {
+        "label": "Disagree",
+        "value": 2
+      },
+      {
+        "label": "Neutral",
+        "value": 3
+      },
+      {
+        "label": "Agree",
+        "value": 4
+      },
+      {
+        "label": "Strongly Agree",
+        "value": 5
+      }
+    ],
+    "categoryWeights": {
+      "R": 1,
+      "I": 3,
+      "A": 1,
+      "S": 0,
+      "E": 0,
+      "C": 1
+    }
+  },
+  {
+    "id": "cp-18",
+    "testId": "career-personality",
+    "order": 18,
+    "type": "likert",
+    "text": "I enjoy debating viewpoints, speaking in front of a crowd, and convincing people of a good idea.",
+    "required": true,
+    "options": [
+      {
+        "label": "Strongly Disagree",
+        "value": 1
+      },
+      {
+        "label": "Disagree",
+        "value": 2
+      },
+      {
+        "label": "Neutral",
+        "value": 3
+      },
+      {
+        "label": "Agree",
+        "value": 4
+      },
+      {
+        "label": "Strongly Agree",
+        "value": 5
+      }
+    ],
+    "categoryWeights": {
+      "R": 0,
+      "I": 0,
+      "A": 1,
+      "S": 1,
+      "E": 3,
+      "C": 0
+    }
+  },
+  {
+    "id": "cp-19",
+    "testId": "career-personality",
+    "order": 19,
+    "type": "likert",
+    "text": "I notice small mistakes in numbers, spelling, or instructions that other people tend to miss.",
+    "required": true,
+    "options": [
+      {
+        "label": "Strongly Disagree",
+        "value": 1
+      },
+      {
+        "label": "Disagree",
+        "value": 2
+      },
+      {
+        "label": "Neutral",
+        "value": 3
+      },
+      {
+        "label": "Agree",
+        "value": 4
+      },
+      {
+        "label": "Strongly Agree",
+        "value": 5
+      }
+    ],
+    "categoryWeights": {
+      "R": 0,
+      "I": 1,
+      "A": 0,
+      "S": 0,
+      "E": 0,
+      "C": 3
+    }
+  },
+  {
+    "id": "cp-20",
+    "testId": "career-personality",
+    "order": 20,
+    "type": "single_choice",
+    "text": "What kind of daily work environment helps you do your best?",
+    "required": true,
+    "options": [
+      {
+        "label": "A workshop, lab, or field setting with hands-on tasks",
+        "value": 5,
+        "weights": {
+          "R": 3,
+          "I": 1
+        }
+      },
+      {
+        "label": "A quiet studio or creative space with freedom to experiment",
+        "value": 5,
+        "weights": {
+          "A": 3
+        }
+      },
+      {
+        "label": "A people-focused space like a school, clinic, or community hub",
+        "value": 5,
+        "weights": {
+          "S": 3,
+          "E": 1
+        }
+      },
+      {
+        "label": "A structured office with clear goals, schedules, and metrics",
+        "value": 5,
+        "weights": {
+          "C": 3,
+          "E": 1
+        }
+      }
+    ],
+    "categoryWeights": {
+      "R": 1,
+      "I": 1,
+      "A": 1,
+      "S": 1,
+      "E": 1,
+      "C": 1
+    }
+  },
+  {
+    "id": "cp-21",
+    "testId": "career-personality",
+    "order": 21,
+    "type": "likert",
+    "text": "I like hands-on tasks that produce something real and visible rather than purely abstract theory.",
+    "required": true,
+    "options": [
+      {
+        "label": "Strongly Disagree",
+        "value": 1
+      },
+      {
+        "label": "Disagree",
+        "value": 2
+      },
+      {
+        "label": "Neutral",
+        "value": 3
+      },
+      {
+        "label": "Agree",
+        "value": 4
+      },
+      {
+        "label": "Strongly Agree",
+        "value": 5
+      }
+    ],
+    "categoryWeights": {
+      "R": 3,
+      "I": 0,
+      "A": 1,
+      "S": 0,
+      "E": 0,
+      "C": 0
+    }
+  },
+  {
+    "id": "cp-22",
+    "testId": "career-personality",
+    "order": 22,
+    "type": "likert",
+    "text": "I enjoy explaining difficult topics clearly to friends until everything clicks for them.",
+    "required": true,
+    "options": [
+      {
+        "label": "Strongly Disagree",
+        "value": 1
+      },
+      {
+        "label": "Disagree",
+        "value": 2
+      },
+      {
+        "label": "Neutral",
+        "value": 3
+      },
+      {
+        "label": "Agree",
+        "value": 4
+      },
+      {
+        "label": "Strongly Agree",
+        "value": 5
+      }
+    ],
+    "categoryWeights": {
+      "R": 0,
+      "I": 1,
+      "A": 0,
+      "S": 3,
+      "E": 0,
+      "C": 0
+    }
+  },
+  {
+    "id": "cp-23",
+    "testId": "career-personality",
+    "order": 23,
+    "type": "likert",
+    "text": "I enjoy inventing new ways of doing things instead of always repeating the standard method.",
+    "required": true,
+    "options": [
+      {
+        "label": "Strongly Disagree",
+        "value": 1
+      },
+      {
+        "label": "Disagree",
+        "value": 2
+      },
+      {
+        "label": "Neutral",
+        "value": 3
+      },
+      {
+        "label": "Agree",
+        "value": 4
+      },
+      {
+        "label": "Strongly Agree",
+        "value": 5
+      }
+    ],
+    "categoryWeights": {
+      "R": 0,
+      "I": 2,
+      "A": 3,
+      "S": 0,
+      "E": 1,
+      "C": 0
+    }
+  },
+  {
+    "id": "cp-24",
+    "testId": "career-personality",
+    "order": 24,
+    "type": "likert",
+    "text": "I feel comfortable taking responsibility for important decisions when a team is unsure.",
+    "required": true,
+    "options": [
+      {
+        "label": "Strongly Disagree",
+        "value": 1
+      },
+      {
+        "label": "Disagree",
+        "value": 2
+      },
+      {
+        "label": "Neutral",
+        "value": 3
+      },
+      {
+        "label": "Agree",
+        "value": 4
+      },
+      {
+        "label": "Strongly Agree",
+        "value": 5
+      }
+    ],
+    "categoryWeights": {
+      "R": 0,
+      "I": 0,
+      "A": 0,
+      "S": 1,
+      "E": 3,
+      "C": 1
+    }
+  },
+  {
+    "id": "cp-25",
+    "testId": "career-personality",
+    "order": 25,
+    "type": "likert",
+    "text": "I enjoy keeping files, checklists, and daily plans neatly organized.",
+    "required": true,
+    "options": [
+      {
+        "label": "Strongly Disagree",
+        "value": 1
+      },
+      {
+        "label": "Disagree",
+        "value": 2
+      },
+      {
+        "label": "Neutral",
+        "value": 3
+      },
+      {
+        "label": "Agree",
+        "value": 4
+      },
+      {
+        "label": "Strongly Agree",
+        "value": 5
+      }
+    ],
+    "categoryWeights": {
+      "R": 0,
+      "I": 0,
+      "A": 0,
+      "S": 0,
+      "E": 0,
+      "C": 3
+    }
+  },
+  {
+    "id": "cp-26",
+    "testId": "career-personality",
+    "order": 26,
+    "type": "likert",
+    "text": "Reading about science, medicine, or new technology discoveries genuinely excites me.",
+    "required": true,
+    "options": [
+      {
+        "label": "Strongly Disagree",
+        "value": 1
+      },
+      {
+        "label": "Disagree",
+        "value": 2
+      },
+      {
+        "label": "Neutral",
+        "value": 3
+      },
+      {
+        "label": "Agree",
+        "value": 4
+      },
+      {
+        "label": "Strongly Agree",
+        "value": 5
+      }
+    ],
+    "categoryWeights": {
+      "R": 0,
+      "I": 3,
+      "A": 0,
+      "S": 0,
+      "E": 0,
+      "C": 0
+    }
+  },
+  {
+    "id": "cp-27",
+    "testId": "career-personality",
+    "order": 27,
+    "type": "likert",
+    "text": "Friends often turn to me for calm, empathetic advice when they are upset or facing a choice.",
+    "required": true,
+    "options": [
+      {
+        "label": "Strongly Disagree",
+        "value": 1
+      },
+      {
+        "label": "Disagree",
+        "value": 2
+      },
+      {
+        "label": "Neutral",
+        "value": 3
+      },
+      {
+        "label": "Agree",
+        "value": 4
+      },
+      {
+        "label": "Strongly Agree",
+        "value": 5
+      }
+    ],
+    "categoryWeights": {
+      "R": 0,
+      "I": 1,
+      "A": 0,
+      "S": 3,
+      "E": 0,
+      "C": 0
+    }
+  },
+  {
+    "id": "cp-28",
+    "testId": "career-personality",
+    "order": 28,
+    "type": "single_choice",
+    "text": "Which achievement would make you proudest in your future career?",
+    "required": true,
+    "options": [
+      {
+        "label": "Building reliable machines, structures, or practical engineering systems",
+        "value": 5,
+        "weights": {
+          "R": 3,
+          "I": 1
+        }
+      },
+      {
+        "label": "Uncovering scientific insights, software breakthroughs, or medical cures",
+        "value": 5,
+        "weights": {
+          "I": 3,
+          "S": 1
+        }
+      },
+      {
+        "label": "Creating inspiring art, architecture, media, or written works",
+        "value": 5,
+        "weights": {
+          "A": 3,
+          "E": 1
+        }
+      },
+      {
+        "label": "Growing an organization, guiding clients, or strengthening communities",
+        "value": 5,
+        "weights": {
+          "E": 2,
+          "S": 2,
+          "C": 1
+        }
+      }
+    ],
+    "categoryWeights": {
+      "R": 1,
+      "I": 1,
+      "A": 1,
+      "S": 1,
+      "E": 1,
+      "C": 1
+    }
+  },
+  {
+    "id": "pq-01",
+    "testId": "photo-career-quiz",
+    "order": 1,
+    "type": "image",
+    "text": "Working with Machinery & Tools",
+    "description": "Operating precision equipment and assembling mechanical systems.",
+    "imageUrl": "assets/images/photos/pq-01.jpg",
+    "fallbackSvg": "assets/images/careers/engineering.svg",
+    "required": true,
+    "options": [
+      {
+        "label": "Like",
+        "value": 2
+      },
+      {
+        "label": "Not Sure",
+        "value": 1
+      },
+      {
+        "label": "Dislike",
+        "value": 0
+      }
+    ],
+    "categoryWeights": {
+      "R": 3,
+      "I": 1,
+      "A": 0,
+      "S": 0,
+      "E": 0,
+      "C": 0
+    }
+  },
+  {
+    "id": "pq-02",
+    "testId": "photo-career-quiz",
+    "order": 2,
+    "type": "image",
+    "text": "Building & Civil Construction",
+    "description": "Planning structures, inspecting construction sites, and shaping infrastructure.",
+    "imageUrl": "assets/images/photos/pq-02.jpg",
+    "fallbackSvg": "assets/images/careers/construction.svg",
+    "required": true,
+    "options": [
+      {
+        "label": "Like",
+        "value": 2
+      },
+      {
+        "label": "Not Sure",
+        "value": 1
+      },
+      {
+        "label": "Dislike",
+        "value": 0
+      }
+    ],
+    "categoryWeights": {
+      "R": 3,
+      "I": 1,
+      "A": 0,
+      "S": 0,
+      "E": 1,
+      "C": 1
+    }
+  },
+  {
+    "id": "pq-03",
+    "testId": "photo-career-quiz",
+    "order": 3,
+    "type": "image",
+    "text": "Working in a Science Laboratory",
+    "description": "Running experiments, testing samples, and recording discoveries.",
+    "imageUrl": "assets/images/photos/pq-03.jpg",
+    "fallbackSvg": "assets/images/careers/laboratory.svg",
+    "required": true,
+    "options": [
+      {
+        "label": "Like",
+        "value": 2
+      },
+      {
+        "label": "Not Sure",
+        "value": 1
+      },
+      {
+        "label": "Dislike",
+        "value": 0
+      }
+    ],
+    "categoryWeights": {
+      "R": 1,
+      "I": 3,
+      "A": 0,
+      "S": 0,
+      "E": 0,
+      "C": 1
+    }
+  },
+  {
+    "id": "pq-04",
+    "testId": "photo-career-quiz",
+    "order": 4,
+    "type": "image",
+    "text": "Healthcare & Caring for Patients",
+    "description": "Supporting patient recovery, diagnosing health needs, and medical care.",
+    "imageUrl": "assets/images/photos/pq-04.jpg",
+    "fallbackSvg": "assets/images/careers/healthcare.svg",
+    "required": true,
+    "options": [
+      {
+        "label": "Like",
+        "value": 2
+      },
+      {
+        "label": "Not Sure",
+        "value": 1
+      },
+      {
+        "label": "Dislike",
+        "value": 0
+      }
+    ],
+    "categoryWeights": {
+      "R": 1,
+      "I": 2,
+      "A": 0,
+      "S": 3,
+      "E": 0,
+      "C": 0
+    }
+  },
+  {
+    "id": "pq-05",
+    "testId": "photo-career-quiz",
+    "order": 5,
+    "type": "image",
+    "text": "Teaching & Guiding Students",
+    "description": "Explaining ideas in a classroom and helping learners grow.",
+    "imageUrl": "assets/images/photos/pq-05.jpg",
+    "fallbackSvg": "assets/images/careers/teaching.svg",
+    "required": true,
+    "options": [
+      {
+        "label": "Like",
+        "value": 2
+      },
+      {
+        "label": "Not Sure",
+        "value": 1
+      },
+      {
+        "label": "Dislike",
+        "value": 0
+      }
+    ],
+    "categoryWeights": {
+      "R": 0,
+      "I": 1,
+      "A": 1,
+      "S": 3,
+      "E": 0,
+      "C": 0
+    }
+  },
+  {
+    "id": "pq-06",
+    "testId": "photo-career-quiz",
+    "order": 6,
+    "type": "image",
+    "text": "Working with Computers & Code",
+    "description": "Writing software, building digital tools, and solving tech challenges.",
+    "imageUrl": "assets/images/photos/pq-06.jpg",
+    "fallbackSvg": "assets/images/careers/programming.svg",
+    "required": true,
+    "options": [
+      {
+        "label": "Like",
+        "value": 2
+      },
+      {
+        "label": "Not Sure",
+        "value": 1
+      },
+      {
+        "label": "Dislike",
+        "value": 0
+      }
+    ],
+    "categoryWeights": {
+      "R": 1,
+      "I": 3,
+      "A": 1,
+      "S": 0,
+      "E": 0,
+      "C": 2
+    }
+  },
+  {
+    "id": "pq-07",
+    "testId": "photo-career-quiz",
+    "order": 7,
+    "type": "image",
+    "text": "Designing Visual Artwork & Interfaces",
+    "description": "Creating graphics, digital layouts, and visual brand experiences.",
+    "imageUrl": "assets/images/photos/pq-07.jpg",
+    "fallbackSvg": "assets/images/careers/design.svg",
+    "required": true,
+    "options": [
+      {
+        "label": "Like",
+        "value": 2
+      },
+      {
+        "label": "Not Sure",
+        "value": 1
+      },
+      {
+        "label": "Dislike",
+        "value": 0
+      }
+    ],
+    "categoryWeights": {
+      "R": 0,
+      "I": 1,
+      "A": 3,
+      "S": 0,
+      "E": 1,
+      "C": 0
+    }
+  },
+  {
+    "id": "pq-08",
+    "testId": "photo-career-quiz",
+    "order": 8,
+    "type": "image",
+    "text": "Photography, Video & Media Production",
+    "description": "Capturing visual stories, directing media, and producing digital content.",
+    "imageUrl": "assets/images/photos/pq-08.jpg",
+    "fallbackSvg": "assets/images/careers/journalism.svg",
+    "required": true,
+    "options": [
+      {
+        "label": "Like",
+        "value": 2
+      },
+      {
+        "label": "Not Sure",
+        "value": 1
+      },
+      {
+        "label": "Dislike",
+        "value": 0
+      }
+    ],
+    "categoryWeights": {
+      "R": 1,
+      "I": 0,
+      "A": 3,
+      "S": 0,
+      "E": 2,
+      "C": 0
+    }
+  },
+  {
+    "id": "pq-09",
+    "testId": "photo-career-quiz",
+    "order": 9,
+    "type": "image",
+    "text": "Working with Plants, Crops & Nature",
+    "description": "Cultivating greenhouses, studying soil health, and outdoor agronomy.",
+    "imageUrl": "assets/images/photos/pq-09.jpg",
+    "fallbackSvg": "assets/images/careers/agriculture.svg",
+    "required": true,
+    "options": [
+      {
+        "label": "Like",
+        "value": 2
+      },
+      {
+        "label": "Not Sure",
+        "value": 1
+      },
+      {
+        "label": "Dislike",
+        "value": 0
+      }
+    ],
+    "categoryWeights": {
+      "R": 3,
+      "I": 2,
+      "A": 0,
+      "S": 0,
+      "E": 0,
+      "C": 0
+    }
+  },
+  {
+    "id": "pq-10",
+    "testId": "photo-career-quiz",
+    "order": 10,
+    "type": "image",
+    "text": "Business & Startup Entrepreneurship",
+    "description": "Launching new ideas, pitching ventures, and building products.",
+    "imageUrl": "assets/images/photos/pq-10.jpg",
+    "fallbackSvg": "assets/images/careers/business.svg",
+    "required": true,
+    "options": [
+      {
+        "label": "Like",
+        "value": 2
+      },
+      {
+        "label": "Not Sure",
+        "value": 1
+      },
+      {
+        "label": "Dislike",
+        "value": 0
+      }
+    ],
+    "categoryWeights": {
+      "R": 0,
+      "I": 0,
+      "A": 1,
+      "S": 0,
+      "E": 3,
+      "C": 0
+    }
+  },
+  {
+    "id": "pq-11",
+    "testId": "photo-career-quiz",
+    "order": 11,
+    "type": "image",
+    "text": "Leading a Team & Presenting Strategy",
+    "description": "Running project meetings, guiding teams, and making key decisions.",
+    "imageUrl": "assets/images/photos/pq-11.jpg",
+    "fallbackSvg": "assets/images/careers/business.svg",
+    "required": true,
+    "options": [
+      {
+        "label": "Like",
+        "value": 2
+      },
+      {
+        "label": "Not Sure",
+        "value": 1
+      },
+      {
+        "label": "Dislike",
+        "value": 0
+      }
+    ],
+    "categoryWeights": {
+      "R": 0,
+      "I": 0,
+      "A": 0,
+      "S": 1,
+      "E": 3,
+      "C": 1
+    }
+  },
+  {
+    "id": "pq-12",
+    "testId": "photo-career-quiz",
+    "order": 12,
+    "type": "image",
+    "text": "Working with Numbers & Finance",
+    "description": "Managing accounts, checking financial budgets, and auditing reports.",
+    "imageUrl": "assets/images/photos/pq-12.jpg",
+    "fallbackSvg": "assets/images/careers/finance.svg",
+    "required": true,
+    "options": [
+      {
+        "label": "Like",
+        "value": 2
+      },
+      {
+        "label": "Not Sure",
+        "value": 1
+      },
+      {
+        "label": "Dislike",
+        "value": 0
+      }
+    ],
+    "categoryWeights": {
+      "R": 0,
+      "I": 1,
+      "A": 0,
+      "S": 0,
+      "E": 1,
+      "C": 3
+    }
+  },
+  {
+    "id": "pq-13",
+    "testId": "photo-career-quiz",
+    "order": 13,
+    "type": "image",
+    "text": "Data Analysis & Statistical Charts",
+    "description": "Turning complex numbers and trends into clear insights.",
+    "imageUrl": "assets/images/photos/pq-13.jpg",
+    "fallbackSvg": "assets/images/careers/data.svg",
+    "required": true,
+    "options": [
+      {
+        "label": "Like",
+        "value": 2
+      },
+      {
+        "label": "Not Sure",
+        "value": 1
+      },
+      {
+        "label": "Dislike",
+        "value": 0
+      }
+    ],
+    "categoryWeights": {
+      "R": 0,
+      "I": 3,
+      "A": 0,
+      "S": 0,
+      "E": 0,
+      "C": 3
+    }
+  },
+  {
+    "id": "pq-14",
+    "testId": "photo-career-quiz",
+    "order": 14,
+    "type": "image",
+    "text": "Writing, Journalism & Publishing",
+    "description": "Drafting stories, interviewing people, and communicating clearly in print.",
+    "imageUrl": "assets/images/photos/pq-14.jpg",
+    "fallbackSvg": "assets/images/careers/journalism.svg",
+    "required": true,
+    "options": [
+      {
+        "label": "Like",
+        "value": 2
+      },
+      {
+        "label": "Not Sure",
+        "value": 1
+      },
+      {
+        "label": "Dislike",
+        "value": 0
+      }
+    ],
+    "categoryWeights": {
+      "R": 0,
+      "I": 1,
+      "A": 3,
+      "S": 1,
+      "E": 1,
+      "C": 0
+    }
+  },
+  {
+    "id": "pq-15",
+    "testId": "photo-career-quiz",
+    "order": 15,
+    "type": "image",
+    "text": "Helping Communities & Social Support",
+    "description": "Supporting families, organizing welfare drives, and counselling people.",
+    "imageUrl": "assets/images/photos/pq-15.jpg",
+    "fallbackSvg": "assets/images/careers/social.svg",
+    "required": true,
+    "options": [
+      {
+        "label": "Like",
+        "value": 2
+      },
+      {
+        "label": "Not Sure",
+        "value": 1
+      },
+      {
+        "label": "Dislike",
+        "value": 0
+      }
+    ],
+    "categoryWeights": {
+      "R": 0,
+      "I": 0,
+      "A": 0,
+      "S": 3,
+      "E": 1,
+      "C": 0
+    }
+  },
+  {
+    "id": "pq-16",
+    "testId": "photo-career-quiz",
+    "order": 16,
+    "type": "image",
+    "text": "Architecture & Spatial Blueprints",
+    "description": "Sketching building designs, floor plans, and creative spaces.",
+    "imageUrl": "assets/images/photos/pq-16.jpg",
+    "fallbackSvg": "assets/images/careers/architecture.svg",
+    "required": true,
+    "options": [
+      {
+        "label": "Like",
+        "value": 2
+      },
+      {
+        "label": "Not Sure",
+        "value": 1
+      },
+      {
+        "label": "Dislike",
+        "value": 0
+      }
+    ],
+    "categoryWeights": {
+      "R": 2,
+      "I": 1,
+      "A": 3,
+      "S": 0,
+      "E": 0,
+      "C": 0
+    }
+  },
+  {
+    "id": "pq-17",
+    "testId": "photo-career-quiz",
+    "order": 17,
+    "type": "image",
+    "text": "Electronics & Robotics Engineering",
+    "description": "Testing circuit boards, sensors, and hardware prototypes.",
+    "imageUrl": "assets/images/photos/pq-17.jpg",
+    "fallbackSvg": "assets/images/careers/engineering.svg",
+    "required": true,
+    "options": [
+      {
+        "label": "Like",
+        "value": 2
+      },
+      {
+        "label": "Not Sure",
+        "value": 1
+      },
+      {
+        "label": "Dislike",
+        "value": 0
+      }
+    ],
+    "categoryWeights": {
+      "R": 3,
+      "I": 2,
+      "A": 0,
+      "S": 0,
+      "E": 0,
+      "C": 1
+    }
+  },
+  {
+    "id": "pq-18",
+    "testId": "photo-career-quiz",
+    "order": 18,
+    "type": "image",
+    "text": "Marketing & Brand Campaigns",
+    "description": "Understanding audiences, pitching creative campaigns, and growing brands.",
+    "imageUrl": "assets/images/photos/pq-18.jpg",
+    "fallbackSvg": "assets/images/careers/business.svg",
+    "required": true,
+    "options": [
+      {
+        "label": "Like",
+        "value": 2
+      },
+      {
+        "label": "Not Sure",
+        "value": 1
+      },
+      {
+        "label": "Dislike",
+        "value": 0
+      }
+    ],
+    "categoryWeights": {
+      "R": 0,
+      "I": 0,
+      "A": 2,
+      "S": 1,
+      "E": 3,
+      "C": 0
+    }
+  },
+  {
+    "id": "pq-19",
+    "testId": "photo-career-quiz",
+    "order": 19,
+    "type": "image",
+    "text": "Law, Contracts & Legal Advocacy",
+    "description": "Researching legal rules, preparing cases, and speaking up for clients.",
+    "imageUrl": "assets/images/photos/pq-19.jpg",
+    "fallbackSvg": "assets/images/careers/law.svg",
+    "required": true,
+    "options": [
+      {
+        "label": "Like",
+        "value": 2
+      },
+      {
+        "label": "Not Sure",
+        "value": 1
+      },
+      {
+        "label": "Dislike",
+        "value": 0
+      }
+    ],
+    "categoryWeights": {
+      "R": 0,
+      "I": 2,
+      "A": 0,
+      "S": 1,
+      "E": 3,
+      "C": 1
+    }
+  },
+  {
+    "id": "pq-20",
+    "testId": "photo-career-quiz",
+    "order": 20,
+    "type": "image",
+    "text": "Environmental Field Research",
+    "description": "Studying ecosystems, testing water quality, and protecting habitats.",
+    "imageUrl": "assets/images/photos/pq-20.jpg",
+    "fallbackSvg": "assets/images/careers/environment.svg",
+    "required": true,
+    "options": [
+      {
+        "label": "Like",
+        "value": 2
+      },
+      {
+        "label": "Not Sure",
+        "value": 1
+      },
+      {
+        "label": "Dislike",
+        "value": 0
+      }
+    ],
+    "categoryWeights": {
+      "R": 2,
+      "I": 3,
+      "A": 0,
+      "S": 1,
+      "E": 0,
+      "C": 0
+    }
+  },
+  {
+    "id": "pq-21",
+    "testId": "photo-career-quiz",
+    "order": 21,
+    "type": "image",
+    "text": "Office Administration & Records",
+    "description": "Organizing important files, coordinating schedules, and ensuring smooth operations.",
+    "imageUrl": "assets/images/photos/pq-21.jpg",
+    "fallbackSvg": "assets/images/careers/admin.svg",
+    "required": true,
+    "options": [
+      {
+        "label": "Like",
+        "value": 2
+      },
+      {
+        "label": "Not Sure",
+        "value": 1
+      },
+      {
+        "label": "Dislike",
+        "value": 0
+      }
+    ],
+    "categoryWeights": {
+      "R": 0,
+      "I": 0,
+      "A": 0,
+      "S": 0,
+      "E": 1,
+      "C": 3
+    }
+  },
+  {
+    "id": "cd-01",
+    "testId": "career-discovery",
+    "order": 1,
+    "type": "multiple_choice",
+    "text": "Which school subjects do you enjoy most? (Select all that apply)",
+    "required": true,
+    "options": [
+      {
+        "label": "Mathematics & Statistics",
+        "value": 3,
+        "weights": {
+          "I": 2,
+          "C": 2
+        },
+        "subjects": [
+          "Mathematics",
+          "Statistics"
+        ]
+      },
+      {
+        "label": "Physics & Technology",
+        "value": 3,
+        "weights": {
+          "R": 2,
+          "I": 2
+        },
+        "subjects": [
+          "Physics"
+        ]
+      },
+      {
+        "label": "Biology & Chemistry",
+        "value": 3,
+        "weights": {
+          "I": 3,
+          "S": 1
+        },
+        "subjects": [
+          "Biology",
+          "Chemistry"
+        ]
+      },
+      {
+        "label": "Computer Science",
+        "value": 3,
+        "weights": {
+          "I": 3,
+          "R": 1,
+          "C": 1
+        },
+        "subjects": [
+          "Computer Science"
+        ]
+      },
+      {
+        "label": "Art, Design & English / Literature",
+        "value": 3,
+        "weights": {
+          "A": 3
+        },
+        "subjects": [
+          "Fine Arts",
+          "English"
+        ]
+      },
+      {
+        "label": "Accounting, Economics & Business",
+        "value": 3,
+        "weights": {
+          "E": 2,
+          "C": 2
+        },
+        "subjects": [
+          "Accounting",
+          "Economics",
+          "Business Studies"
+        ]
+      },
+      {
+        "label": "Psychology, History & Social Studies",
+        "value": 3,
+        "weights": {
+          "S": 3,
+          "E": 1
+        },
+        "subjects": [
+          "Psychology",
+          "History",
+          "Sociology"
+        ]
+      }
+    ],
+    "categoryWeights": {
+      "R": 1,
+      "I": 1,
+      "A": 1,
+      "S": 1,
+      "E": 1,
+      "C": 1
+    }
+  },
+  {
+    "id": "cd-02",
+    "testId": "career-discovery",
+    "order": 2,
+    "type": "multiple_choice",
+    "text": "Which of these strengths sound most like you? (Select all that apply)",
+    "required": true,
+    "options": [
+      {
+        "label": "Good with my hands, tools, or fixing things",
+        "value": 3,
+        "weights": {
+          "R": 3
+        }
+      },
+      {
+        "label": "Curious and good at solving tricky puzzles",
+        "value": 3,
+        "weights": {
+          "I": 3
+        }
+      },
+      {
+        "label": "Imaginative with art, writing, or design ideas",
+        "value": 3,
+        "weights": {
+          "A": 3
+        }
+      },
+      {
+        "label": "Patient listener who enjoys helping people",
+        "value": 3,
+        "weights": {
+          "S": 3
+        }
+      },
+      {
+        "label": "Confident speaker who likes organizing people",
+        "value": 3,
+        "weights": {
+          "E": 3
+        }
+      },
+      {
+        "label": "Neat, reliable, and careful with details",
+        "value": 3,
+        "weights": {
+          "C": 3
+        }
+      }
+    ],
+    "categoryWeights": {
+      "R": 1,
+      "I": 1,
+      "A": 1,
+      "S": 1,
+      "E": 1,
+      "C": 1
+    }
+  },
+  {
+    "id": "cd-03",
+    "testId": "career-discovery",
+    "order": 3,
+    "type": "single_choice",
+    "text": "If you had a free afternoon to learn something new, what would you pick?",
+    "required": true,
+    "options": [
+      {
+        "label": "Build a small robot, gadget, or mechanical project",
+        "value": 5,
+        "weights": {
+          "R": 3,
+          "I": 1
+        }
+      },
+      {
+        "label": "Learn how diseases are cured or explore how code works",
+        "value": 5,
+        "weights": {
+          "I": 3,
+          "S": 1
+        }
+      },
+      {
+        "label": "Design a poster, edit a short film, or write a story",
+        "value": 5,
+        "weights": {
+          "A": 3
+        }
+      },
+      {
+        "label": "Organize a charity event or pitch a small business idea",
+        "value": 5,
+        "weights": {
+          "E": 2,
+          "S": 2
+        }
+      }
+    ],
+    "categoryWeights": {
+      "R": 1,
+      "I": 1,
+      "A": 1,
+      "S": 1,
+      "E": 1,
+      "C": 1
+    }
+  },
+  {
+    "id": "cd-04",
+    "testId": "career-discovery",
+    "order": 4,
+    "type": "single_choice",
+    "text": "Where would you prefer to spend most of your workday?",
+    "required": true,
+    "options": [
+      {
+        "label": "Outdoors, on field sites, or in a hands-on workshop",
+        "value": 5,
+        "weights": {
+          "R": 3
+        }
+      },
+      {
+        "label": "In a research lab, hospital, or tech office",
+        "value": 5,
+        "weights": {
+          "I": 3,
+          "C": 1
+        }
+      },
+      {
+        "label": "In a creative studio, media agency, or architectural office",
+        "value": 5,
+        "weights": {
+          "A": 3
+        }
+      },
+      {
+        "label": "In a classroom, office meeting room, or community space",
+        "value": 5,
+        "weights": {
+          "S": 2,
+          "E": 2
+        }
+      }
+    ],
+    "categoryWeights": {
+      "R": 1,
+      "I": 1,
+      "A": 1,
+      "S": 1,
+      "E": 1,
+      "C": 1
+    }
+  },
+  {
+    "id": "cd-05",
+    "testId": "career-discovery",
+    "order": 5,
+    "type": "single_choice",
+    "text": "How do you like to work on big tasks?",
+    "required": true,
+    "options": [
+      {
+        "label": "Mostly on my own with quiet focus",
+        "value": 5,
+        "weights": {
+          "I": 3,
+          "A": 2,
+          "C": 1
+        }
+      },
+      {
+        "label": "In a small technical team solving practical problems",
+        "value": 5,
+        "weights": {
+          "R": 2,
+          "I": 2
+        }
+      },
+      {
+        "label": "Working closely with people to help, teach, or care for them",
+        "value": 5,
+        "weights": {
+          "S": 3
+        }
+      },
+      {
+        "label": "Leading a group and keeping everyone moving toward targets",
+        "value": 5,
+        "weights": {
+          "E": 3,
+          "C": 1
+        }
+      }
+    ],
+    "categoryWeights": {
+      "R": 1,
+      "I": 1,
+      "A": 1,
+      "S": 1,
+      "E": 1,
+      "C": 1
+    }
+  },
+  {
+    "id": "cd-06",
+    "testId": "career-discovery",
+    "order": 6,
+    "type": "interest_scale",
+    "text": "Solving practical, hands-on problems with real materials or equipment.",
+    "required": true,
+    "options": [
+      {
+        "label": "Not interested",
+        "value": 0
+      },
+      {
+        "label": "Slightly interested",
+        "value": 1
+      },
+      {
+        "label": "Interested",
+        "value": 2
+      },
+      {
+        "label": "Very interested",
+        "value": 3
+      }
+    ],
+    "categoryWeights": {
+      "R": 3,
+      "I": 1,
+      "A": 0,
+      "S": 0,
+      "E": 0,
+      "C": 0
+    }
+  },
+  {
+    "id": "cd-07",
+    "testId": "career-discovery",
+    "order": 7,
+    "type": "interest_scale",
+    "text": "Using science, math, or technology to analyze data and discover answers.",
+    "required": true,
+    "options": [
+      {
+        "label": "Not interested",
+        "value": 0
+      },
+      {
+        "label": "Slightly interested",
+        "value": 1
+      },
+      {
+        "label": "Interested",
+        "value": 2
+      },
+      {
+        "label": "Very interested",
+        "value": 3
+      }
+    ],
+    "categoryWeights": {
+      "R": 0,
+      "I": 3,
+      "A": 0,
+      "S": 0,
+      "E": 0,
+      "C": 1
+    }
+  },
+  {
+    "id": "cd-08",
+    "testId": "career-discovery",
+    "order": 8,
+    "type": "interest_scale",
+    "text": "Expressing ideas through art, design, media, or creative writing.",
+    "required": true,
+    "options": [
+      {
+        "label": "Not interested",
+        "value": 0
+      },
+      {
+        "label": "Slightly interested",
+        "value": 1
+      },
+      {
+        "label": "Interested",
+        "value": 2
+      },
+      {
+        "label": "Very interested",
+        "value": 3
+      }
+    ],
+    "categoryWeights": {
+      "R": 0,
+      "I": 0,
+      "A": 3,
+      "S": 0,
+      "E": 1,
+      "C": 0
+    }
+  },
+  {
+    "id": "cd-09",
+    "testId": "career-discovery",
+    "order": 9,
+    "type": "interest_scale",
+    "text": "Teaching, mentoring, healthcare, or supporting people's well-being.",
+    "required": true,
+    "options": [
+      {
+        "label": "Not interested",
+        "value": 0
+      },
+      {
+        "label": "Slightly interested",
+        "value": 1
+      },
+      {
+        "label": "Interested",
+        "value": 2
+      },
+      {
+        "label": "Very interested",
+        "value": 3
+      }
+    ],
+    "categoryWeights": {
+      "R": 0,
+      "I": 0,
+      "A": 0,
+      "S": 3,
+      "E": 0,
+      "C": 0
+    }
+  },
+  {
+    "id": "cd-10",
+    "testId": "career-discovery",
+    "order": 10,
+    "type": "interest_scale",
+    "text": "Business, marketing, entrepreneurship, or leading projects.",
+    "required": true,
+    "options": [
+      {
+        "label": "Not interested",
+        "value": 0
+      },
+      {
+        "label": "Slightly interested",
+        "value": 1
+      },
+      {
+        "label": "Interested",
+        "value": 2
+      },
+      {
+        "label": "Very interested",
+        "value": 3
+      }
+    ],
+    "categoryWeights": {
+      "R": 0,
+      "I": 0,
+      "A": 0,
+      "S": 0,
+      "E": 3,
+      "C": 1
+    }
+  },
+  {
+    "id": "cd-11",
+    "testId": "career-discovery",
+    "order": 11,
+    "type": "interest_scale",
+    "text": "Managing finances, organizing records, and keeping workflows accurate.",
+    "required": true,
+    "options": [
+      {
+        "label": "Not interested",
+        "value": 0
+      },
+      {
+        "label": "Slightly interested",
+        "value": 1
+      },
+      {
+        "label": "Interested",
+        "value": 2
+      },
+      {
+        "label": "Very interested",
+        "value": 3
+      }
+    ],
+    "categoryWeights": {
+      "R": 0,
+      "I": 1,
+      "A": 0,
+      "S": 0,
+      "E": 0,
+      "C": 3
+    }
+  },
+  {
+    "id": "cd-12",
+    "testId": "career-discovery",
+    "order": 12,
+    "type": "multiple_choice",
+    "text": "What matters most to you in your future career and lifestyle? (Select up to 3)",
+    "required": true,
+    "options": [
+      {
+        "label": "Job stability and clear career structure",
+        "value": 3,
+        "weights": {
+          "C": 3,
+          "S": 1
+        }
+      },
+      {
+        "label": "Continuous learning and solving new puzzles",
+        "value": 3,
+        "weights": {
+          "I": 3
+        }
+      },
+      {
+        "label": "Creative freedom to build original things",
+        "value": 3,
+        "weights": {
+          "A": 3
+        }
+      },
+      {
+        "label": "Making a direct difference in people's lives",
+        "value": 3,
+        "weights": {
+          "S": 3
+        }
+      },
+      {
+        "label": "High earning potential and leadership growth",
+        "value": 3,
+        "weights": {
+          "E": 3
+        }
+      },
+      {
+        "label": "Active outdoor or hands-on work instead of sitting all day",
+        "value": 3,
+        "weights": {
+          "R": 3
+        }
+      }
+    ],
+    "categoryWeights": {
+      "R": 1,
+      "I": 1,
+      "A": 1,
+      "S": 1,
+      "E": 1,
+      "C": 1
+    }
+  },
+  {
+    "id": "cd-13",
+    "testId": "career-discovery",
+    "order": 13,
+    "type": "likert",
+    "text": "I enjoy lab experiments and practical projects more than memorizing theory from textbooks.",
+    "required": true,
+    "options": [
+      {
+        "label": "Strongly Disagree",
+        "value": 1
+      },
+      {
+        "label": "Disagree",
+        "value": 2
+      },
+      {
+        "label": "Neutral",
+        "value": 3
+      },
+      {
+        "label": "Agree",
+        "value": 4
+      },
+      {
+        "label": "Strongly Agree",
+        "value": 5
+      }
+    ],
+    "categoryWeights": {
+      "R": 2,
+      "I": 3,
+      "A": 0,
+      "S": 0,
+      "E": 0,
+      "C": 0
+    }
+  },
+  {
+    "id": "cd-14",
+    "testId": "career-discovery",
+    "order": 14,
+    "type": "likert",
+    "text": "I feel comfortable working with numbers, percentages, budgets, or charts.",
+    "required": true,
+    "options": [
+      {
+        "label": "Strongly Disagree",
+        "value": 1
+      },
+      {
+        "label": "Disagree",
+        "value": 2
+      },
+      {
+        "label": "Neutral",
+        "value": 3
+      },
+      {
+        "label": "Agree",
+        "value": 4
+      },
+      {
+        "label": "Strongly Agree",
+        "value": 5
+      }
+    ],
+    "categoryWeights": {
+      "R": 0,
+      "I": 2,
+      "A": 0,
+      "S": 0,
+      "E": 0,
+      "C": 3
+    }
+  },
+  {
+    "id": "cd-15",
+    "testId": "career-discovery",
+    "order": 15,
+    "type": "likert",
+    "text": "I enjoy open-ended creative projects more than following strict step-by-step templates.",
+    "required": true,
+    "options": [
+      {
+        "label": "Strongly Disagree",
+        "value": 1
+      },
+      {
+        "label": "Disagree",
+        "value": 2
+      },
+      {
+        "label": "Neutral",
+        "value": 3
+      },
+      {
+        "label": "Agree",
+        "value": 4
+      },
+      {
+        "label": "Strongly Agree",
+        "value": 5
+      }
+    ],
+    "categoryWeights": {
+      "R": 0,
+      "I": 1,
+      "A": 3,
+      "S": 0,
+      "E": 1,
+      "C": 0
+    }
+  },
+  {
+    "id": "cd-16",
+    "testId": "career-discovery",
+    "order": 16,
+    "type": "likert",
+    "text": "I would enjoy caring for animals, working in nature, or protecting the environment.",
+    "required": true,
+    "options": [
+      {
+        "label": "Strongly Disagree",
+        "value": 1
+      },
+      {
+        "label": "Disagree",
+        "value": 2
+      },
+      {
+        "label": "Neutral",
+        "value": 3
+      },
+      {
+        "label": "Agree",
+        "value": 4
+      },
+      {
+        "label": "Strongly Agree",
+        "value": 5
+      }
+    ],
+    "categoryWeights": {
+      "R": 3,
+      "I": 2,
+      "A": 0,
+      "S": 1,
+      "E": 0,
+      "C": 0
+    }
+  },
+  {
+    "id": "cd-17",
+    "testId": "career-discovery",
+    "order": 17,
+    "type": "likert",
+    "text": "I am interested in building apps, protecting networks, or working in modern technology.",
+    "required": true,
+    "options": [
+      {
+        "label": "Strongly Disagree",
+        "value": 1
+      },
+      {
+        "label": "Disagree",
+        "value": 2
+      },
+      {
+        "label": "Neutral",
+        "value": 3
+      },
+      {
+        "label": "Agree",
+        "value": 4
+      },
+      {
+        "label": "Strongly Agree",
+        "value": 5
+      }
+    ],
+    "categoryWeights": {
+      "R": 2,
+      "I": 3,
+      "A": 0,
+      "S": 0,
+      "E": 0,
+      "C": 2
+    }
+  },
+  {
+    "id": "cd-18",
+    "testId": "career-discovery",
+    "order": 18,
+    "type": "likert",
+    "text": "I enjoy understanding why people think, feel, and behave the way they do.",
+    "required": true,
+    "options": [
+      {
+        "label": "Strongly Disagree",
+        "value": 1
+      },
+      {
+        "label": "Disagree",
+        "value": 2
+      },
+      {
+        "label": "Neutral",
+        "value": 3
+      },
+      {
+        "label": "Agree",
+        "value": 4
+      },
+      {
+        "label": "Strongly Agree",
+        "value": 5
+      }
+    ],
+    "categoryWeights": {
+      "R": 0,
+      "I": 2,
+      "A": 0,
+      "S": 3,
+      "E": 0,
+      "C": 0
+    }
+  },
+  {
+    "id": "cd-19",
+    "testId": "career-discovery",
+    "order": 19,
+    "type": "single_choice",
+    "text": "Which school club or competition sounds most fun to join?",
+    "required": true,
+    "options": [
+      {
+        "label": "Robotics, Engineering, or Maker Club",
+        "value": 5,
+        "weights": {
+          "R": 3,
+          "I": 2
+        }
+      },
+      {
+        "label": "Science Fair, Math Olympiad, or Coding Club",
+        "value": 5,
+        "weights": {
+          "I": 3,
+          "C": 1
+        }
+      },
+      {
+        "label": "Art, Photography, Media, or School Magazine",
+        "value": 5,
+        "weights": {
+          "A": 3
+        }
+      },
+      {
+        "label": "Debate Society, Student Council, or Entrepreneurship Club",
+        "value": 5,
+        "weights": {
+          "E": 3,
+          "S": 1
+        }
+      }
+    ],
+    "categoryWeights": {
+      "R": 1,
+      "I": 1,
+      "A": 1,
+      "S": 1,
+      "E": 1,
+      "C": 1
+    }
+  },
+  {
+    "id": "cd-20",
+    "testId": "career-discovery",
+    "order": 20,
+    "type": "likert",
+    "text": "I am happy to spend extra years studying at university or medical school if my dream career requires it.",
+    "required": true,
+    "options": [
+      {
+        "label": "Strongly Disagree",
+        "value": 1
+      },
+      {
+        "label": "Disagree",
+        "value": 2
+      },
+      {
+        "label": "Neutral",
+        "value": 3
+      },
+      {
+        "label": "Agree",
+        "value": 4
+      },
+      {
+        "label": "Strongly Agree",
+        "value": 5
+      }
+    ],
+    "categoryWeights": {
+      "R": 0,
+      "I": 3,
+      "A": 0,
+      "S": 2,
+      "E": 0,
+      "C": 1
+    }
+  },
+  {
+    "id": "cd-21",
+    "testId": "career-discovery",
+    "order": 21,
+    "type": "likert",
+    "text": "I like keeping projects on schedule, managing resources, and making sure teams stay organized.",
+    "required": true,
+    "options": [
+      {
+        "label": "Strongly Disagree",
+        "value": 1
+      },
+      {
+        "label": "Disagree",
+        "value": 2
+      },
+      {
+        "label": "Neutral",
+        "value": 3
+      },
+      {
+        "label": "Agree",
+        "value": 4
+      },
+      {
+        "label": "Strongly Agree",
+        "value": 5
+      }
+    ],
+    "categoryWeights": {
+      "R": 0,
+      "I": 0,
+      "A": 0,
+      "S": 1,
+      "E": 2,
+      "C": 3
+    }
+  },
+  {
+    "id": "cd-22",
+    "testId": "career-discovery",
+    "order": 22,
+    "type": "single_choice",
+    "text": "Which broad career cluster are you most curious to explore first?",
+    "required": true,
+    "options": [
+      {
+        "label": "Technology, Computing & Engineering",
+        "value": 5,
+        "weights": {
+          "I": 3,
+          "R": 2
+        }
+      },
+      {
+        "label": "Healthcare, Medicine, Science & Environment",
+        "value": 5,
+        "weights": {
+          "I": 2,
+          "S": 2,
+          "R": 1
+        }
+      },
+      {
+        "label": "Creative Design, Media, Writing & Architecture",
+        "value": 5,
+        "weights": {
+          "A": 3
+        }
+      },
+      {
+        "label": "Business, Finance, Law & Education",
+        "value": 5,
+        "weights": {
+          "E": 2,
+          "C": 2,
+          "S": 1
+        }
+      }
+    ],
+    "categoryWeights": {
+      "R": 1,
+      "I": 1,
+      "A": 1,
+      "S": 1,
+      "E": 1,
+      "C": 1
+    }
+  }
+]

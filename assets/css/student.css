@@ -1,0 +1,475 @@
+/* Career Compass — Student Portal, Quiz Runner & Graphical Report Styles */
+
+.student-topbar {
+  background-color: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--cc-border);
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+
+.student-topbar-inner {
+  min-height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.brand-wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+  font-family: var(--cc-font-display);
+  font-weight: 800;
+  font-size: 1.12rem;
+  color: var(--cc-navy);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.brand-wordmark img {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+}
+
+.student-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.student-nav-link {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--cc-ink-muted);
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding: 0.35rem 0;
+  border-bottom: 2px solid transparent;
+  transition: color 150ms ease, border-color 150ms ease;
+}
+
+.student-nav-link:hover,
+.student-nav-link.active {
+  color: var(--cc-navy);
+  border-bottom-color: var(--cc-teal);
+}
+
+/* Modern Light Hero */
+.hero-compass {
+  background: linear-gradient(155deg, #ffffff 0%, #eff6ff 52%, #f0fdfa 100%);
+  border-bottom: 1px solid var(--cc-border);
+  padding: 3.5rem 0 4rem;
+}
+
+.hero-eyebrow {
+  font-family: var(--cc-font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cc-teal);
+  margin-bottom: 0.75rem;
+}
+
+.hero-compass h1 {
+  color: var(--cc-navy);
+  font-size: clamp(2rem, 3.6vw, 3rem);
+  font-weight: 800;
+  line-height: 1.14;
+}
+
+.hero-compass .lead {
+  color: var(--cc-ink-muted);
+  max-width: 56ch;
+  font-size: 1.075rem;
+}
+
+.hero-illustration-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-illustration-wrap img {
+  width: 100%;
+  max-width: 470px;
+  height: auto;
+  border-radius: var(--cc-radius);
+}
+
+.hero-active-banner {
+  background-color: #ffffff;
+  border: 1px solid #99f6e4;
+  border-radius: var(--cc-radius-sm);
+  padding: 0.85rem 1.1rem;
+  box-shadow: var(--cc-shadow);
+}
+
+/* 3 Assessment Cards */
+.step-index {
+  font-family: var(--cc-font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--cc-teal);
+  margin-bottom: 0.45rem;
+}
+
+.test-catalog-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.test-catalog-card:hover {
+  border-color: var(--cc-teal);
+  box-shadow: var(--cc-shadow-hover);
+  transform: translateY(-2px);
+}
+
+.test-card-visual {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: var(--cc-blue-soft);
+  border-bottom: 1px solid var(--cc-border);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.test-card-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.test-card-body {
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.test-catalog-card .card-footer-actions {
+  margin-top: auto;
+  padding-top: 1.15rem;
+  border-top: 1px solid var(--cc-border);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* Student Profile Optional Subject Chips */
+.subject-chip-check {
+  position: relative;
+}
+
+.subject-chip-check input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.subject-chip-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.78rem;
+  border: 1px solid var(--cc-border-strong);
+  border-radius: var(--cc-radius-sm);
+  background-color: #ffffff;
+  color: var(--cc-ink-muted);
+  font-size: 0.835rem;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  transition: border-color 140ms ease, background-color 140ms ease, color 140ms ease;
+}
+
+.subject-chip-label:hover {
+  border-color: var(--cc-navy);
+  color: var(--cc-navy);
+}
+
+.subject-chip-check input:checked + .subject-chip-label {
+  border-color: var(--cc-teal);
+  background-color: var(--cc-teal-tint);
+  color: var(--cc-navy-dark);
+  font-weight: 600;
+}
+
+/* Assessment Runner */
+.assessment-progress-track {
+  height: 9px;
+  background-color: var(--cc-border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.assessment-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--cc-blue) 0%, var(--cc-teal) 100%);
+  transition: width 220ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.question-stage {
+  padding: 2rem;
+}
+
+.photo-prompt-banner {
+  font-family: var(--cc-font-display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--cc-blue);
+  margin-bottom: 0.45rem;
+}
+
+.question-photo-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background-color: var(--cc-surface-muted);
+  border: 1px solid var(--cc-border);
+  border-radius: var(--cc-radius);
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+}
+
+.question-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.option-choice-btn {
+  width: 100%;
+  text-align: left;
+  padding: 0.9rem 1.15rem;
+  border: 1px solid var(--cc-border-strong);
+  border-radius: var(--cc-radius-sm);
+  background-color: #ffffff;
+  color: var(--cc-ink);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  cursor: pointer;
+  min-height: 48px;
+  transition: border-color 150ms ease, background-color 150ms ease, transform 120ms ease;
+}
+
+.option-choice-btn:hover {
+  border-color: var(--cc-navy);
+  background-color: var(--cc-bg);
+}
+
+.option-choice-btn.selected {
+  border-color: var(--cc-teal);
+  background-color: var(--cc-teal-tint);
+  color: var(--cc-navy-dark);
+  font-weight: 600;
+}
+
+.interest-scale-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.interest-scale-card {
+  padding: 1rem 0.75rem;
+  border: 1px solid var(--cc-border-strong);
+  border-radius: var(--cc-radius-sm);
+  background-color: #ffffff;
+  color: var(--cc-ink);
+  text-align: center;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.875rem;
+  min-height: 78px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  transition: border-color 150ms ease, background-color 150ms ease;
+}
+
+.interest-scale-card:hover {
+  border-color: var(--cc-navy);
+  background-color: var(--cc-bg);
+}
+
+.interest-scale-card.selected {
+  border-color: var(--cc-teal);
+  background-color: var(--cc-teal-tint);
+  color: var(--cc-navy-dark);
+}
+
+.like-dislike-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.like-dislike-card {
+  padding: 1.05rem 0.85rem;
+  border: 1px solid var(--cc-border-strong);
+  border-radius: var(--cc-radius-sm);
+  background-color: #ffffff;
+  color: var(--cc-ink);
+  text-align: center;
+  cursor: pointer;
+  font-weight: 600;
+  min-height: 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  transition: border-color 150ms ease, background-color 150ms ease, transform 120ms ease;
+}
+
+.like-dislike-card:hover {
+  border-color: var(--cc-navy);
+  background-color: var(--cc-bg);
+}
+
+.like-dislike-card.selected.opt-like {
+  border-color: var(--cc-success);
+  background-color: #f0fdf4;
+  color: #166534;
+}
+
+.like-dislike-card.selected.opt-neutral {
+  border-color: var(--cc-blue);
+  background-color: var(--cc-blue-soft);
+  color: #1e40af;
+}
+
+.like-dislike-card.selected.opt-dislike {
+  border-color: var(--cc-ink-subtle);
+  background-color: var(--cc-surface-muted);
+  color: var(--cc-ink);
+}
+
+.q-nav-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(36px, 1fr));
+  gap: 0.4rem;
+}
+
+.q-nav-btn {
+  height: 34px;
+  border: 1px solid var(--cc-border-strong);
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: var(--cc-ink-muted);
+  font-family: var(--cc-font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.q-nav-btn.answered {
+  background-color: var(--cc-teal-tint);
+  border-color: var(--cc-teal);
+  color: var(--cc-teal-hover);
+}
+
+.q-nav-btn.current {
+  background-color: var(--cc-navy);
+  border-color: var(--cc-navy);
+  color: #ffffff;
+}
+
+/* Graphical Results Report */
+.report-header-band {
+  background: linear-gradient(135deg, #0f2547 0%, #1b3664 65%, #0d6e7a 100%);
+  color: #ffffff;
+  border-radius: var(--cc-radius);
+  padding: 2rem;
+}
+
+.report-header-band h1,
+.report-header-band h2 {
+  color: #ffffff;
+}
+
+.chart-box {
+  position: relative;
+  height: 290px;
+  width: 100%;
+}
+
+.career-match-bar {
+  height: 8px;
+  background-color: var(--cc-surface-muted);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.career-match-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--cc-blue) 0%, var(--cc-teal) 100%);
+}
+
+.career-icon-box {
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  background-color: var(--cc-blue-soft);
+  color: var(--cc-navy);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  flex-shrink: 0;
+}
+
+.footer-academic {
+  background-color: var(--cc-surface);
+  border-top: 1px solid var(--cc-border);
+  padding: 2rem 0;
+  margin-top: 4rem;
+  font-size: 0.875rem;
+  color: var(--cc-ink-subtle);
+}
+
+@media (max-width: 767.98px) {
+  .student-nav-links {
+    display: none;
+  }
+
+  .hero-compass {
+    padding: 2.25rem 0 2.75rem;
+  }
+
+  .like-dislike-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .interest-scale-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .question-stage {
+    padding: 1.25rem;
+  }
+}

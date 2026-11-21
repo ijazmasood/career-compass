@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Portal | Career Compass</title>
+    <meta name="description" content="Enter your name and choose any of the three Career Compass assessments." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="assets/css/student.css" rel="stylesheet" />
+  </head>
+  <body data-page="student">
+    <header class="student-topbar">
+      <div class="container student-topbar-inner">
+        <a href="index.html" class="brand-wordmark">
+          <img src="assets/images/logo-compass.svg" alt="Career Compass Logo" />
+          <span data-system-name>Career Compass</span>
+        </a>
+        <nav class="student-nav-links" aria-label="Student Navigation">
+          <a href="index.html" class="student-nav-link">Home</a>
+          <a href="student.html" class="student-nav-link active">Student Portal</a>
+          <a href="result.html" class="student-nav-link">Sample Report</a>
+          <a href="admin-login.html" class="student-nav-link">Counsellor Login</a>
+        </nav>
+        <div class="d-flex align-items-center gap-2 shrink-0">
+          <button type="button" id="btnNewStudentSession" class="btn btn-outline-slate btn-sm">
+            <i class="bi bi-person-plus"></i> Switch Student
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="py-4 py-lg-5">
+      <div class="container">
+        <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4">
+          <div>
+            <div class="small fw-semibold text-teal mb-1" data-school-name>Student Career Counselling Portal</div>
+            <h1 class="h2 fw-bold mb-1">Student Profile &amp; Career Quizzes</h1>
+            <p class="text-secondary mb-0">Enter your name below, then start any of the three career assessments.</p>
+          </div>
+          <button type="button" id="btnFillDemoStudent" class="btn btn-outline-slate btn-sm">
+            <i class="bi bi-magic"></i> Fill Sample Student
+          </button>
+        </div>
+
+        <div id="activeProfileSummary" class="cgams-card p-3 px-4 mb-4 d-none">
+          <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+            <div>
+              <div class="small text-secondary fw-semibold">Current Student</div>
+              <div class="fw-bold text-dark" id="summaryStudentName"></div>
+              <div class="small text-secondary" id="summaryStudentMeta"></div>
+            </div>
+            <button type="button" id="profileCollapseBtn" class="btn btn-outline-slate btn-sm" data-bs-toggle="collapse" data-bs-target="#bioDataCollapse">
+              Edit Profile
+            </button>
+          </div>
+        </div>
+
+        <div class="collapse show mb-5" id="bioDataCollapse">
+          <div class="cgams-card p-4 p-lg-5">
+            <h2 class="h4 fw-bold mb-1">Quick Student Profile</h2>
+            <p class="small text-secondary mb-4">Only your <strong>Full Name</strong> is required. Everything else is optional.</p>
+
+            <form id="studentProfileForm" class="needs-validation" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6 col-lg-5">
+                  <label class="form-label" for="stuFullName">Full Name *</label>
+                  <input type="text" class="form-control" id="stuFullName" placeholder="e.g., Ayesha Tariq" required />
+                  <div class="invalid-feedback">Please enter your full name.</div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                  <label class="form-label" for="stuRollNo">Student ID / Roll No. <span class="fw-normal text-secondary">(Optional)</span></label>
+                  <input type="text" class="form-control font-mono-num" id="stuRollNo" placeholder="e.g., STU-2026-105" />
+                </div>
+                <div class="col-md-6 col-lg-2">
+                  <label class="form-label" for="stuGrade">Class / Grade <span class="fw-normal text-secondary">(Optional)</span></label>
+                  <select class="form-select" id="stuGrade">
+                    <option value="">Optional</option>
+                    <option value="9 (SSC-I)">9 (SSC-I)</option>
+                    <option value="10 (SSC-II)">10 (SSC-II)</option>
+                    <option value="11 (HSSC-I)">11 (HSSC-I)</option>
+                    <option value="12 (HSSC-II)">12 (HSSC-II)</option>
+                    <option value="University / College">University / College</option>
+                  </select>
+                </div>
+                <div class="col-md-6 col-lg-2">
+                  <label class="form-label" for="stuAge">Age <span class="fw-normal text-secondary">(Optional)</span></label>
+                  <input type="number" class="form-control font-mono-num" id="stuAge" min="11" max="30" placeholder="16" />
+                </div>
+
+                <div class="col-md-4 col-lg-3">
+                  <label class="form-label" for="stuSection">Section <span class="fw-normal text-secondary">(Optional)</span></label>
+                  <input type="text" class="form-control" id="stuSection" placeholder="e.g., A" />
+                </div>
+                <div class="col-md-4 col-lg-3">
+                  <label class="form-label" for="stuSchool">School / College <span class="fw-normal text-secondary">(Optional)</span></label>
+                  <input type="text" class="form-control" id="stuSchool" placeholder="Your school name" />
+                </div>
+                <div class="col-md-4 col-lg-3">
+                  <label class="form-label" for="stuCity">City <span class="fw-normal text-secondary">(Optional)</span></label>
+                  <input type="text" class="form-control" id="stuCity" placeholder="Your city" />
+                </div>
+                <div class="col-md-12 col-lg-3">
+                  <label class="form-label" for="stuEmail">Email <span class="fw-normal text-secondary">(Optional)</span></label>
+                  <input type="email" class="form-control" id="stuEmail" placeholder="student@example.com" />
+                </div>
+
+                <div class="col-12 mt-3">
+                  <label class="form-label">Favorite Subjects <span class="fw-normal text-secondary small">(Optional — helps personalize career matches)</span></label>
+                  <div class="d-flex flex-wrap gap-2" id="favoriteSubjectsBox"></div>
+                </div>
+
+                <div class="col-12 pt-3 d-flex flex-wrap justify-content-between align-items-center gap-3 border-top mt-4">
+                  <div class="small text-secondary">
+                    <i class="bi bi-shield-lock me-1"></i> Stored locally in your browser for demo use.
+                  </div>
+                  <button type="submit" class="btn btn-teal px-4">
+                    Save &amp; Continue <i class="bi bi-check2-circle"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <section id="assessmentHubSection">
+          <div class="mb-3">
+            <h2 class="h3 fw-bold mb-1">Choose an Assessment</h2>
+            <p class="text-secondary mb-0">Take any quiz independently or complete multiple quizzes to compare your results.</p>
+          </div>
+
+          <div id="profileLockedNotice" class="cgams-disclaimer-box mb-4">
+            <i class="bi bi-info-circle me-2 text-primary"></i>
+            Enter your <strong>Full Name</strong> above and click <strong>Save &amp; Continue</strong> (or click Start Quiz directly after typing your name).
+          </div>
+
+          <div id="combinedProfileCard" class="cgams-card p-4 mb-4 d-none" style="background: #f0fdfa; border-color: #99f6e4;">
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+              <div>
+                <div class="small fw-semibold text-teal">Combined Insights Ready</div>
+                <h3 class="h5 fw-bold mb-1">Combined Multi-Quiz Career Profile</h3>
+                <p class="small text-secondary mb-0">
+                  You have <strong id="combinedCountText"></strong>. View your averaged interest scores and unified Top 5 career matches.
+                </p>
+              </div>
+              <a id="viewCombinedProfileLink" href="result.html" class="btn btn-primary-navy">
+                View Combined Profile <i class="bi bi-bar-chart-steps"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="row g-4" id="studentTestHubGrid"></div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer-academic">
+      <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+        <div><strong class="text-dark" data-system-name>Career Compass</strong> · Student Assessment Portal</div>
+        <div>Exploratory Career Guidance Demo · Browser LocalStorage Mode</div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/storage.js"></script>
+    <script src="assets/js/scoring.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/student.js"></script>
+  </body>
+</html>

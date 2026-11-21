@@ -1,0 +1,38 @@
+[
+  {
+    "id": "career-personality",
+    "title": "Career Personality & Interest Profiler",
+    "shortTitle": "Personality Profiler",
+    "category": "Personality & Interests",
+    "estimatedMinutes": 12,
+    "questionCount": 28,
+    "active": true,
+    "cardImage": "assets/images/test-personality.svg",
+    "description": "Explore your personality, interests, strengths, preferences, and work style to discover career directions that may suit you.",
+    "instructions": "Read each statement or scenario and choose the option that best reflects how you naturally work and think. There are no right or wrong answers."
+  },
+  {
+    "id": "photo-career-quiz",
+    "title": "Photo Career Quiz",
+    "shortTitle": "Photo Career Quiz",
+    "category": "Visual Interests",
+    "estimatedMinutes": 10,
+    "questionCount": 21,
+    "active": true,
+    "cardImage": "assets/images/test-photo.svg",
+    "description": "Explore careers through pictures. Select the activities and working environments that appeal to you.",
+    "instructions": "Look at each workplace scene and ask yourself: \"How would you feel about doing this type of work?\" Pick Like, Not Sure, or Dislike based on your genuine interest."
+  },
+  {
+    "id": "career-discovery",
+    "title": "Career Discovery Quiz",
+    "shortTitle": "Career Discovery",
+    "category": "Subjects & Environment",
+    "estimatedMinutes": 12,
+    "questionCount": 22,
+    "active": true,
+    "cardImage": "assets/images/test-discovery.svg",
+    "description": "Discover possible career directions through your favourite subjects, skills, interests, values, and preferred working environment.",
+    "instructions": "Choose the school subjects, skills, and work settings that feel most like you. Some questions allow selecting multiple answers."
+  }
+]

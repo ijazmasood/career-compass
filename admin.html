@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counsellor Admin Panel | Career Compass</title>
+    <meta name="description" content="Streamlined Counsellor Admin Panel for managing students, results, tests, questions, and careers." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="assets/css/admin.css" rel="stylesheet" />
+  </head>
+  <body data-page="admin">
+    <div class="admin-sidebar-backdrop" id="adminSidebarBackdrop"></div>
+
+    <div class="admin-layout">
+      <aside class="admin-sidebar" id="adminSidebar" aria-label="Admin Navigation">
+        <div class="admin-sidebar-brand">
+          <img src="assets/images/logo-compass.svg" alt="Career Compass Logo" />
+          <div>
+            <div id="adminSystemTitle">Career Compass</div>
+            <div class="small fw-normal" style="font-size: 0.72rem; color: rgba(255,255,255,0.68);" id="adminSchoolLabel">Counsellor Portal</div>
+          </div>
+        </div>
+
+        <ul class="admin-nav-list">
+          <li><button type="button" class="admin-nav-btn active" data-view="dashboard"><i class="bi bi-speedometer2"></i> Dashboard</button></li>
+          <li><button type="button" class="admin-nav-btn" data-view="students"><i class="bi bi-people"></i> Students &amp; Results</button></li>
+          <li><button type="button" class="admin-nav-btn" data-view="questions"><i class="bi bi-ui-checks"></i> Tests &amp; Questions</button></li>
+          <li><button type="button" class="admin-nav-btn" data-view="careers"><i class="bi bi-briefcase"></i> Careers</button></li>
+          <li><button type="button" class="admin-nav-btn" data-view="settings"><i class="bi bi-sliders"></i> Settings</button></li>
+        </ul>
+
+        <div class="p-3 border-top" style="border-color: rgba(255,255,255,0.12) !important;">
+          <a href="index.html" class="admin-nav-btn text-decoration-none mb-1"><i class="bi bi-box-arrow-up-right"></i> Student Portal</a>
+          <button type="button" class="admin-nav-btn text-warning" id="btnAdminLogout"><i class="bi bi-box-arrow-right"></i> Logout</button>
+        </div>
+      </aside>
+
+      <div class="admin-main">
+        <header class="admin-topbar">
+          <div class="d-flex align-items-center gap-3">
+            <button type="button" class="btn btn-outline-slate btn-sm d-lg-none" id="btnMobileSidebarToggle" aria-label="Toggle Menu">
+              <i class="bi bi-list"></i>
+            </button>
+            <div>
+              <div class="small text-secondary">Counsellor Admin Panel · Demo Storage</div>
+              <h1 class="h5 fw-bold mb-0" id="adminBreadcrumbTitle">Dashboard Overview</h1>
+            </div>
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <span class="small text-secondary d-none d-md-inline" id="adminCounsellorBadge">Career Counsellor</span>
+            <button type="button" class="btn btn-outline-slate btn-sm" id="btnTopExportJson">
+              <i class="bi bi-download"></i> Export JSON
+            </button>
+          </div>
+        </header>
+
+        <div class="admin-content">
+          <!-- 1. DASHBOARD VIEW (4 KPIs + 4 Charts) -->
+          <section id="view-dashboard" class="admin-view-section">
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+              <div class="small text-secondary">Overview of student assessments across all three Career Compass quizzes.</div>
+              <div class="segmented-filter" role="group" aria-label="Date range filter">
+                <button type="button" class="dash-range-btn" data-range="today">Today</button>
+                <button type="button" class="dash-range-btn" data-range="week">This Week</button>
+                <button type="button" class="dash-range-btn" data-range="month">This Month</button>
+                <button type="button" class="dash-range-btn active" data-range="all">All Time</button>
+              </div>
+            </div>
+
+            <div class="row g-3 mb-4">
+              <div class="col-sm-6 col-xl-3">
+                <div class="cgams-card kpi-card">
+                  <div class="kpi-label">Total Assessments</div>
+                  <div class="kpi-value" id="kpiTotalTests">0</div>
+                  <div class="kpi-sub">Completed &amp; recorded</div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-xl-3">
+                <div class="cgams-card kpi-card">
+                  <div class="kpi-label">Total Students</div>
+                  <div class="kpi-value" id="kpiTotalStudents">0</div>
+                  <div class="kpi-sub">Active &amp; sample profiles</div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-xl-3">
+                <div class="cgams-card kpi-card">
+                  <div class="kpi-label">Most Popular Test</div>
+                  <div class="h5 fw-bold text-dark mt-1 mb-0" id="kpiPopularTest">—</div>
+                  <div class="kpi-sub">Highest student volume</div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-xl-3">
+                <div class="cgams-card kpi-card">
+                  <div class="kpi-label">Most Recommended Career</div>
+                  <div class="h5 fw-bold text-dark mt-1 mb-0" id="kpiPopularCareer">—</div>
+                  <div class="kpi-sub">Top #1 match across results</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-4 mb-4">
+              <div class="col-lg-5">
+                <div class="cgams-card p-4 h-100">
+                  <h2 class="h6 fw-bold mb-3">Assessments Taken by Test Type</h2>
+                  <div class="admin-chart-box"><canvas id="dashTestDistChart"></canvas></div>
+                </div>
+              </div>
+              <div class="col-lg-7">
+                <div class="cgams-card p-4 h-100">
+                  <h2 class="h6 fw-bold mb-3">Top Recommended Careers</h2>
+                  <div class="admin-chart-box"><canvas id="dashTopCareersChart"></canvas></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-4">
+              <div class="col-lg-6">
+                <div class="cgams-card p-4 h-100">
+                  <h2 class="h6 fw-bold mb-3">Interest Category Distribution (Average %)</h2>
+                  <div class="admin-chart-box"><canvas id="dashRiasecChart"></canvas></div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="cgams-card p-4 h-100">
+                  <h2 class="h6 fw-bold mb-3">Activity Over Time</h2>
+                  <div class="admin-chart-box"><canvas id="dashOverTimeChart"></canvas></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 2. STUDENTS & RESULTS VIEW -->
+          <section id="view-students" class="admin-view-section d-none">
+            <div class="cgams-card p-4">
+              <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+                <div class="d-flex flex-wrap gap-2">
+                  <input type="search" id="subSearchInput" class="form-control form-control-sm" style="width: 240px;" placeholder="Search student, ID, or career..." />
+                  <select id="subFilterTest" class="form-select form-select-sm" style="width: 195px;"></select>
+                  <select id="subFilterClass" class="form-select form-select-sm" style="width: 165px;"></select>
+                </div>
+                <button type="button" id="btnExportFilteredCsv" class="btn btn-outline-slate btn-sm">
+                  <i class="bi bi-filetype-csv"></i> Export CSV
+                </button>
+              </div>
+
+              <div class="table-responsive">
+                <table class="table admin-table align-middle">
+                  <thead>
+                    <tr>
+                      <th class="sub-sort-th" data-sort="studentName">Student Name <i class="bi bi-arrow-down-up small"></i></th>
+                      <th class="sub-sort-th" data-sort="rollNo">Student ID</th>
+                      <th class="sub-sort-th" data-sort="grade">Class</th>
+                      <th class="sub-sort-th" data-sort="testName">Test Type</th>
+                      <th class="sub-sort-th" data-sort="date">Date <i class="bi bi-arrow-down-up small"></i></th>
+                      <th class="sub-sort-th" data-sort="topCareerTitle">Top Career</th>
+                      <th class="text-end">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody id="submissionsTableBody"></tbody>
+                </table>
+              </div>
+
+              <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mt-3 pt-3 border-top">
+                <div class="small text-secondary font-mono-num" id="subPaginationInfo"></div>
+                <div class="d-flex gap-1" id="subPaginationControls"></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 3. TESTS & QUESTIONS VIEW (Strictly 3 Core Tests) -->
+          <section id="view-questions" class="admin-view-section d-none">
+            <div class="row g-4">
+              <div class="col-lg-4">
+                <div class="cgams-card p-3">
+                  <div class="mb-3">
+                    <h2 class="h6 fw-bold mb-1">3 Career Assessments</h2>
+                    <div class="small text-secondary">Select a quiz to edit its details or manage questions.</div>
+                  </div>
+                  <div id="adminTestsList"></div>
+                </div>
+              </div>
+
+              <div class="col-lg-8">
+                <div class="cgams-card p-4">
+                  <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+                    <div>
+                      <h2 class="h5 fw-bold mb-0" id="qBankSelectedTestTitle">Questions</h2>
+                      <div class="small text-secondary font-mono-num" id="qBankCountBadge">0 Question(s)</div>
+                    </div>
+                    <button type="button" id="btnAddQuestionAdmin" class="btn btn-teal btn-sm">
+                      <i class="bi bi-plus-circle"></i> Add Question
+                    </button>
+                  </div>
+                  <div class="table-responsive">
+                    <table class="table admin-table align-middle">
+                      <thead>
+                        <tr>
+                          <th style="width: 48px;">#</th>
+                          <th>Question</th>
+                          <th style="width: 140px;">Weights</th>
+                          <th class="text-end" style="width: 190px;">Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody id="adminQuestionsTableBody"></tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 4. CAREERS VIEW -->
+          <section id="view-careers" class="admin-view-section d-none">
+            <div class="cgams-card p-4">
+              <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+                <div>
+                  <h2 class="h5 fw-bold mb-0">Career Mapping Library</h2>
+                  <div class="small text-secondary">Manage careers, interest weights, suggested subjects, skills, and education pathways.</div>
+                </div>
+                <button type="button" id="btnAddCareerAdmin" class="btn btn-teal btn-sm">
+                  <i class="bi bi-plus-lg"></i> Add Career
+                </button>
+              </div>
+              <div class="table-responsive">
+                <table class="table admin-table align-middle">
+                  <thead>
+                    <tr>
+                      <th>Career</th>
+                      <th>Interest Weights</th>
+                      <th>Suggested Subjects</th>
+                      <th>Education Pathway</th>
+                      <th class="text-end">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody id="adminCareersTableBody"></tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          <!-- 5. SETTINGS VIEW -->
+          <section id="view-settings" class="admin-view-section d-none">
+            <div class="row g-4">
+              <div class="col-lg-7">
+                <div class="cgams-card p-4">
+                  <h2 class="h5 fw-bold mb-3">System Settings</h2>
+                  <form id="adminSettingsForm">
+                    <div class="row g-3">
+                      <div class="col-md-6">
+                        <label class="form-label" for="setSystemName">System Title</label>
+                        <input type="text" class="form-control" id="setSystemName" required />
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label" for="setSchoolName">School / Portal Name</label>
+                        <input type="text" class="form-control" id="setSchoolName" />
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label" for="setSubtitle">Subtitle</label>
+                        <input type="text" class="form-control" id="setSubtitle" />
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label" for="setCounsellorName">Counsellor Name</label>
+                        <input type="text" class="form-control" id="setCounsellorName" />
+                      </div>
+                      <div class="col-12">
+                        <label class="form-label" for="setDisclaimer">Default Report Disclaimer</label>
+                        <textarea class="form-control" id="setDisclaimer" rows="3"></textarea>
+                      </div>
+                      <div class="col-12">
+                        <button type="submit" class="btn btn-teal">Save Settings</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <div class="col-lg-5">
+                <div class="cgams-card p-4">
+                  <h2 class="h5 fw-bold mb-2">Export &amp; Demo Data</h2>
+                  <p class="small text-secondary mb-3">
+                    Demo edits and student submissions are stored in browser <code>localStorage</code>. Export your data or reset to the clean 3-test seed dataset anytime.
+                  </p>
+                  <div class="d-grid gap-2">
+                    <button type="button" id="btnExportAllJson" class="btn btn-outline-slate">
+                      <i class="bi bi-filetype-json"></i> Export Full System (JSON)
+                    </button>
+                    <button type="button" id="btnExportSubmissionsCsv" class="btn btn-outline-slate">
+                      <i class="bi bi-filetype-csv"></i> Export Student Results (CSV)
+                    </button>
+                    <hr class="my-2" />
+                    <button type="button" id="btnResetDemoData" class="btn btn-danger">
+                      <i class="bi bi-arrow-counterclockwise"></i> Reset Demo Data
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <!-- Submission Detail Modal -->
+    <div class="modal fade" id="submissionDetailModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div>
+              <h5 class="modal-title fw-bold" id="detailStuName">Student Result Details</h5>
+              <div class="small text-secondary" id="detailStuMeta"></div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <input type="hidden" id="detailSubId" />
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3 pb-2 border-bottom">
+              <div class="small fw-semibold font-mono-num" id="detailTestMeta"></div>
+              <a id="detailCombinedLink" href="#" target="_blank" class="btn btn-outline-slate btn-sm d-none">
+                <i class="bi bi-layers"></i> Combined Profile
+              </a>
+            </div>
+
+            <div class="row g-4 mb-4">
+              <div class="col-lg-7">
+                <h6 class="fw-bold mb-2">Category Scores</h6>
+                <div class="row g-2 mb-3" id="detailRiasecGrid"></div>
+                <h6 class="fw-bold mb-2">Recommended Careers</h6>
+                <ul class="list-unstyled small mb-0" id="detailTopCareers"></ul>
+              </div>
+              <div class="col-lg-5">
+                <h6 class="fw-bold mb-2">Counsellor Notes</h6>
+                <textarea class="form-control mb-2" id="detailCounsellorNotes" rows="4" placeholder="Add guidance notes for this student's report..."></textarea>
+                <button type="button" id="btnSaveCounsellorNotes" class="btn btn-teal btn-sm">
+                  <i class="bi bi-check2"></i> Save Notes
+                </button>
+              </div>
+            </div>
+
+            <h6 class="fw-bold mb-2">Submitted Answers</h6>
+            <div class="table-responsive border rounded" style="max-height: 260px;">
+              <table class="table table-sm mb-0">
+                <thead class="table-light">
+                  <tr>
+                    <th>Question</th>
+                    <th style="width: 220px;">Response</th>
+                  </tr>
+                </thead>
+                <tbody id="detailAnswersBody"></tbody>
+              </table>
+            </div>
+          </div>
+          <div class="modal-footer justify-content-between">
+            <button type="button" id="detailDeleteBtn" class="btn btn-outline-danger btn-sm">
+              <i class="bi bi-trash"></i> Delete Submission
+            </button>
+            <div class="d-flex gap-2">
+              <a id="detailPrintLink" href="#" target="_blank" class="btn btn-primary-navy">
+                <i class="bi bi-printer"></i> Printable Report
+              </a>
+              <button type="button" class="btn btn-outline-slate" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Admin Test Edit Modal -->
+    <div class="modal fade" id="adminTestModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <form class="modal-content" id="adminTestForm">
+          <div class="modal-header">
+            <h5 class="modal-title fw-bold">Edit Assessment Details</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <input type="hidden" id="editTestId" />
+            <div class="row g-3">
+              <div class="col-md-8">
+                <label class="form-label" for="editTestTitle">Test Title</label>
+                <input type="text" class="form-control" id="editTestTitle" required />
+              </div>
+              <div class="col-md-4">
+                <label class="form-label" for="editTestShortTitle">Short Label</label>
+                <input type="text" class="form-control" id="editTestShortTitle" required />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="editTestCategory">Category</label>
+                <input type="text" class="form-control" id="editTestCategory" required />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="editTestDuration">Estimated Duration (Minutes)</label>
+                <input type="number" class="form-control font-mono-num" id="editTestDuration" min="1" required />
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="editTestDescription">Description</label>
+                <textarea class="form-control" id="editTestDescription" rows="2" required></textarea>
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="editTestInstructions">Instructions</label>
+                <textarea class="form-control" id="editTestInstructions" rows="2" required></textarea>
+              </div>
+              <div class="col-12">
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" id="editTestActive" checked />
+                  <label class="form-check-label" for="editTestActive">Active in Student Portal</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-slate" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-teal">Save Changes</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Admin Question Editor Modal -->
+    <div class="modal fade" id="adminQuestionModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <form class="modal-content" id="adminQuestionForm">
+          <div class="modal-header">
+            <h5 class="modal-title fw-bold">Question Editor</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <input type="hidden" id="editQId" />
+            <input type="hidden" id="editQTestId" />
+            <div class="row g-3">
+              <div class="col-12">
+                <label class="form-label" for="editQText">Question / Activity Title</label>
+                <input type="text" class="form-control" id="editQText" required />
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="editQDescription">Subtitle / Short Description (Optional)</label>
+                <input type="text" class="form-control" id="editQDescription" />
+              </div>
+              <div class="col-md-8">
+                <label class="form-label" for="editQType">Question Type</label>
+                <select class="form-select" id="editQType">
+                  <option value="likert">Likert Scale (1–5)</option>
+                  <option value="interest_scale">Interest Scale (Not Interested – Very Interested)</option>
+                  <option value="image">Photo Scenario (Like / Not Sure / Dislike)</option>
+                  <option value="single_choice">Single Choice</option>
+                  <option value="multiple_choice">Multiple Choice</option>
+                  <option value="ranking">Ranking</option>
+                  <option value="text">Text Response</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label" for="editQOrder">Display Order</label>
+                <input type="number" class="form-control font-mono-num" id="editQOrder" min="1" required />
+              </div>
+
+              <div class="col-12 d-none" id="qImageConfigBox">
+                <div class="p-3 border rounded bg-light row g-2">
+                  <div class="col-md-7">
+                    <label class="form-label small" for="editQImageUrl">Photo Path / URL</label>
+                    <input type="text" class="form-control form-control-sm" id="editQImageUrl" placeholder="assets/images/photos/pq-01.jpg" />
+                  </div>
+                  <div class="col-md-5">
+                    <label class="form-label small" for="editQFallbackSvg">Offline Fallback Illustration</label>
+                    <select class="form-select form-select-sm" id="editQFallbackSvg">
+                      <option value="assets/images/careers/engineering.svg">Engineering</option>
+                      <option value="assets/images/careers/construction.svg">Construction</option>
+                      <option value="assets/images/careers/laboratory.svg">Laboratory</option>
+                      <option value="assets/images/careers/healthcare.svg">Healthcare</option>
+                      <option value="assets/images/careers/teaching.svg">Teaching</option>
+                      <option value="assets/images/careers/agriculture.svg">Agriculture</option>
+                      <option value="assets/images/careers/architecture.svg">Architecture</option>
+                      <option value="assets/images/careers/design.svg">Design</option>
+                      <option value="assets/images/careers/business.svg">Business</option>
+                      <option value="assets/images/careers/programming.svg">Programming</option>
+                      <option value="assets/images/careers/data.svg">Data Analysis</option>
+                      <option value="assets/images/careers/law.svg">Law</option>
+                      <option value="assets/images/careers/finance.svg">Finance</option>
+                      <option value="assets/images/careers/journalism.svg">Journalism</option>
+                      <option value="assets/images/careers/environment.svg">Environment</option>
+                      <option value="assets/images/careers/admin.svg">Administration</option>
+                      <option value="assets/images/careers/social.svg">Social Support</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <label class="form-label">Interest Category Weights (0–3)</label>
+                <div class="row g-2">
+                  <div class="col-4 col-md-2"><label class="small text-secondary">Practical (R)</label><input type="number" min="0" max="5" class="form-control form-control-sm font-mono-num" id="editQW_R" value="0" /></div>
+                  <div class="col-4 col-md-2"><label class="small text-secondary">Analytical (I)</label><input type="number" min="0" max="5" class="form-control form-control-sm font-mono-num" id="editQW_I" value="0" /></div>
+                  <div class="col-4 col-md-2"><label class="small text-secondary">Creative (A)</label><input type="number" min="0" max="5" class="form-control form-control-sm font-mono-num" id="editQW_A" value="0" /></div>
+                  <div class="col-4 col-md-2"><label class="small text-secondary">Social (S)</label><input type="number" min="0" max="5" class="form-control form-control-sm font-mono-num" id="editQW_S" value="0" /></div>
+                  <div class="col-4 col-md-2"><label class="small text-secondary">Leadership (E)</label><input type="number" min="0" max="5" class="form-control form-control-sm font-mono-num" id="editQW_E" value="0" /></div>
+                  <div class="col-4 col-md-2"><label class="small text-secondary">Organizational (C)</label><input type="number" min="0" max="5" class="form-control form-control-sm font-mono-num" id="editQW_C" value="0" /></div>
+                </div>
+              </div>
+
+              <div class="col-12" id="qOptionsWrapper">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <label class="form-label mb-0">Answer Options &amp; Score Values</label>
+                  <button type="button" id="btnAddOptionRow" class="btn btn-outline-slate btn-sm">+ Add Option</button>
+                </div>
+                <div id="qOptionsContainer"></div>
+              </div>
+
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="editQRequired" checked />
+                  <label class="form-check-label" for="editQRequired">Required question</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-slate" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-teal">Save Question</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Admin Career Profile Modal -->
+    <div class="modal fade" id="adminCareerModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <form class="modal-content" id="adminCareerForm">
+          <div class="modal-header">
+            <h5 class="modal-title fw-bold">Career Profile Editor</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <input type="hidden" id="editCareerId" />
+            <div class="row g-3">
+              <div class="col-md-8">
+                <label class="form-label" for="editCareerTitle">Career Title</label>
+                <input type="text" class="form-control" id="editCareerTitle" required />
+              </div>
+              <div class="col-md-4">
+                <label class="form-label" for="editCareerIcon">Bootstrap Icon Class</label>
+                <input type="text" class="form-control font-mono-num" id="editCareerIcon" placeholder="bi-briefcase" />
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="editCareerDesc">Description</label>
+                <textarea class="form-control" id="editCareerDesc" rows="2" required></textarea>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Interest Profile Weights (0–3)</label>
+                <div class="row g-2">
+                  <div class="col-4 col-md-2"><label class="small">Practical (R)</label><input type="number" min="0" max="3" class="form-control form-control-sm font-mono-num" id="editCW_R" value="0" /></div>
+                  <div class="col-4 col-md-2"><label class="small">Analytical (I)</label><input type="number" min="0" max="3" class="form-control form-control-sm font-mono-num" id="editCW_I" value="0" /></div>
+                  <div class="col-4 col-md-2"><label class="small">Creative (A)</label><input type="number" min="0" max="3" class="form-control form-control-sm font-mono-num" id="editCW_A" value="0" /></div>
+                  <div class="col-4 col-md-2"><label class="small">Social (S)</label><input type="number" min="0" max="3" class="form-control form-control-sm font-mono-num" id="editCW_S" value="0" /></div>
+                  <div class="col-4 col-md-2"><label class="small">Leadership (E)</label><input type="number" min="0" max="3" class="form-control form-control-sm font-mono-num" id="editCW_E" value="0" /></div>
+                  <div class="col-4 col-md-2"><label class="small">Organizational (C)</label><input type="number" min="0" max="3" class="form-control form-control-sm font-mono-num" id="editCW_C" value="0" /></div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="editCareerInterests">Matching Categories (comma-separated)</label>
+                <input type="text" class="form-control" id="editCareerInterests" placeholder="Analytical, Practical" />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="editCareerSubjects">Suggested Subjects (comma-separated)</label>
+                <input type="text" class="form-control" id="editCareerSubjects" placeholder="Mathematics, Computer Science" />
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="editCareerSkills">Skills Needed (comma-separated)</label>
+                <input type="text" class="form-control" id="editCareerSkills" placeholder="Problem Solving, Analysis" />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="editCareerPathway">Education Pathway</label>
+                <input type="text" class="form-control" id="editCareerPathway" />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="editCareerEnv">Work Environment</label>
+                <input type="text" class="form-control" id="editCareerEnv" />
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-slate" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-teal">Save Career</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+    <script src="assets/js/storage.js"></script>
+    <script src="assets/js/scoring.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/questions.js"></script>
+    <script src="assets/js/careers.js"></script>
+    <script src="assets/js/admin.js"></script>
+  </body>
+</html>
