@@ -101,7 +101,30 @@
     let bodyHtml = '';
     const currentVal = state.answers[q.id];
 
-    if (q.type === 'image') {
+    if (q.type === 'photo_pair') {
+      const promptText = q.text || 'Which work activity or environment appeals to you more?';
+      bodyHtml += `<div class="photo-prompt-banner"><i class="bi bi-images me-1"></i> Pick the scene you prefer more, then click Next</div>`;
+      bodyHtml += `<h2 class="h4 fw-bold mb-3">${escapeHtml(promptText)}</h2>`;
+      bodyHtml += '<div class="photo-pair-grid">';
+      (q.options || []).forEach((opt, idx) => {
+        const optId = String(opt.id || (idx === 0 ? 'A' : 'B'));
+        const isSel = String(currentVal) === optId;
+        const altLabel = opt.label || `Work scene ${optId}`;
+        bodyHtml += `
+          <button type="button"
+            class="photo-pair-card answer-single-btn ${isSel ? 'selected' : ''}"
+            data-value="${escapeHtml(optId)}"
+            aria-label="${escapeHtml(altLabel)}"
+            aria-pressed="${isSel ? 'true' : 'false'}">
+            ${renderResilientImage(opt.imageUrl, opt.fallbackSvg, altLabel)}
+            <span class="photo-pair-check" aria-hidden="true">
+              <i class="bi bi-check-lg"></i>
+            </span>
+          </button>
+        `;
+      });
+      bodyHtml += '</div>';
+    } else if (q.type === 'image') {
       bodyHtml += `<div class="photo-prompt-banner"><i class="bi bi-camera me-1"></i> How would you feel about doing this type of work?</div>`;
       bodyHtml += `<h2 class="h4 fw-bold mb-1">${escapeHtml(q.text)}</h2>`;
       if (q.description) {
@@ -286,7 +309,28 @@
       .map((q, idx) => {
         const val = state.answers[q.id];
         let displayAns = '<span class="text-danger fw-semibold">Unanswered</span>';
-        if (isAnswered(q, val)) {
+        let displayQuestion = escapeHtml(q.text);
+        if (q.type === 'photo_pair') {
+          const optA = (q.options || [])[0];
+          const optB = (q.options || [])[1];
+          displayQuestion = `Pair ${idx + 1}: Photo A vs Photo B`;
+          if (isAnswered(q, val)) {
+            const matched = (q.options || []).find((o, i) => String(o.id || (i === 0 ? 'A' : 'B')) === String(val));
+            if (matched) {
+              const choiceTag = `Photo ${escapeHtml(matched.id || val)}`;
+              displayAns = `
+                <div class="d-flex align-items-center gap-2">
+                  <img src="${escapeHtml(matched.imageUrl || matched.fallbackSvg)}" alt="${escapeHtml(choiceTag)}" class="review-thumb-pair" />
+                  <span class="fw-semibold text-dark">${choiceTag} Selected</span>
+                </div>
+              `;
+            } else {
+              displayAns = escapeHtml(val);
+            }
+          } else if (optA && optB) {
+            displayAns = `<span class="text-danger fw-semibold">Unanswered (Choose 1 of 2 photos)</span>`;
+          }
+        } else if (isAnswered(q, val)) {
           if (Array.isArray(val)) {
             displayAns = escapeHtml(val.join(', '));
           } else if (
@@ -304,7 +348,7 @@
         return `
           <tr>
             <td class="font-mono-num text-secondary">${idx + 1}</td>
-            <td class="fw-medium">${escapeHtml(q.text)}</td>
+            <td class="fw-medium">${displayQuestion}</td>
             <td>${displayAns}</td>
             <td class="text-end">
               <button type="button" class="btn btn-outline-slate btn-sm review-jump-btn" data-index="${idx}">
@@ -400,7 +444,7 @@
     $(document).on('click', '.answer-single-btn', function () {
       const q = state.questions[state.currentIndex];
       const val = $(this).data('value');
-      state.answers[q.id] = q.type === 'single_choice' ? String(val) : Number(val);
+      state.answers[q.id] = q.type === 'single_choice' || q.type === 'photo_pair' ? String(val) : Number(val);
       persistDraft();
       renderActiveQuestion();
     });

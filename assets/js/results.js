@@ -133,6 +133,7 @@
     counsellorNote,
     retakeUrl,
     combinedProfileUrl,
+    photoSummary,
     settings
   }) {
     $('#reportTitle').text(title);
@@ -283,6 +284,48 @@
       .join('');
     $('#developmentAreasList').html(devHtml);
 
+    // Photo Career Quiz Visual Preference Analysis
+    if (photoSummary && photoSummary.chosenScenes && photoSummary.chosenScenes.length > 0) {
+      $('#photoChoicesSection').removeClass('d-none');
+      $('#photoChoicesCount').text(`${photoSummary.answeredPairs} of ${photoSummary.totalPairs} pairs chosen`);
+
+      const statsHtml = CGAMSScoring.CODES.map((c) => {
+        const dim = CGAMSScoring.DIMENSIONS[c];
+        const wins = photoSummary.winCounts[c] || 0;
+        const shown = photoSummary.totalShown[c] || 0;
+        return `
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="p-2 border rounded bg-light">
+              <div class="small fw-semibold text-dark">${escapeHtml(dim.short)}</div>
+              <div class="font-mono-num fw-bold" style="color: ${dim.color};">${wins} / ${shown} chosen</div>
+            </div>
+          </div>
+        `;
+      }).join('');
+      $('#photoChoicesCategoryStats').html(statsHtml);
+
+      const galleryHtml = photoSummary.chosenScenes
+        .map(
+          (item) => `
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="border rounded overflow-hidden bg-white h-100 d-flex flex-column">
+              <div style="aspect-ratio: 4/3; overflow: hidden; background: var(--cc-surface-muted);">
+                ${CGAMSUI.renderResilientImage(item.imageUrl, item.fallbackSvg, item.label, 'w-100 h-100 object-fit-cover')}
+              </div>
+              <div class="p-2 small flex-grow-1">
+                <div class="font-mono-num text-secondary" style="font-size: 0.72rem;">Pair #${item.order || ''} · ${escapeHtml(item.primaryName)}</div>
+                <div class="fw-semibold text-dark" style="font-size: 0.82rem;">${escapeHtml(item.label)}</div>
+              </div>
+            </div>
+          </div>
+        `
+        )
+        .join('');
+      $('#photoChoicesGallery').html(galleryHtml);
+    } else {
+      $('#photoChoicesSection').addClass('d-none');
+    }
+
     renderCharts(ranked, topMatches);
   }
 
@@ -336,6 +379,7 @@
         counsellorNote: noteSub ? noteSub.counsellorNotes || noteSub.counsellorRecommendation : '',
         retakeUrl: 'student.html',
         combinedProfileUrl: null,
+        photoSummary: null,
         settings
       });
     } else {
@@ -364,6 +408,10 @@
         breakdown.collectedSubjects,
         careers
       );
+      const photoSummary =
+        sub.testId === 'photo-career-quiz'
+          ? CGAMSScoring.summarizePhotoChoices(questions, sub.answers)
+          : null;
 
       const completedForStudent = CGAMSStorage.getSubmissionsByStudent(student.id).filter(
         (s) => s.status === 'completed'
@@ -389,14 +437,53 @@
         counsellorNote: sub.counsellorNotes || sub.counsellorRecommendation || '',
         retakeUrl: `assessment.html?testId=${encodeURIComponent(sub.testId)}`,
         combinedProfileUrl: combinedUrl,
+        photoSummary,
         settings
       });
     }
 
-    $('#btnPrintReport').on('click', () => window.print());
+    function prepareChartsForPrint() {
+      charts.forEach((chart) => {
+        if (!chart || !chart.canvas) return;
+        const canvas = chart.canvas;
+        const box = canvas.parentElement;
+        if (!box) return;
+        try {
+          chart.update('none');
+          const dataUrl = chart.toBase64Image('image/png', 1);
+          let img = box.querySelector('.chart-print-img');
+          if (!img) {
+            img = document.createElement('img');
+            img.className = 'chart-print-img';
+            img.alt = canvas.id || 'Assessment Chart';
+            box.appendChild(img);
+          }
+          img.src = dataUrl;
+          canvas.classList.add('has-print-snapshot');
+        } catch (err) {
+          console.warn('Could not snapshot chart for print:', err);
+        }
+      });
+    }
+
+    function cleanupChartsAfterPrint() {
+      $('.chart-box .chart-print-img').remove();
+      $('.chart-box canvas.has-print-snapshot').removeClass('has-print-snapshot');
+    }
+
+    global.addEventListener('beforeprint', prepareChartsForPrint);
+    global.addEventListener('afterprint', cleanupChartsAfterPrint);
+
+    $('#btnPrintReport').on('click', () => {
+      prepareChartsForPrint();
+      window.print();
+    });
     $('#btnDownloadPdfReport').on('click', () => {
       showToast('Select "Save as PDF" in the print dialog to export a clean PDF copy.', 'info');
-      setTimeout(() => window.print(), 250);
+      setTimeout(() => {
+        prepareChartsForPrint();
+        window.print();
+      }, 250);
     });
   }
 

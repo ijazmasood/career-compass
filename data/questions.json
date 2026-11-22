@@ -1079,694 +1079,487 @@
     "id": "pq-01",
     "testId": "photo-career-quiz",
     "order": 1,
-    "type": "image",
-    "text": "Working with Machinery & Tools",
-    "description": "Operating precision equipment and assembling mechanical systems.",
-    "imageUrl": "assets/images/photos/pq-01.jpg",
-    "fallbackSvg": "assets/images/careers/engineering.svg",
+    "type": "photo_pair",
+    "text": "Which work activity or environment appeals to you more?",
     "required": true,
     "options": [
       {
-        "label": "Like",
-        "value": 2
+        "id": "A",
+        "label": "Working with Machinery & Tools",
+        "value": 1,
+        "imageUrl": "assets/images/photos/pq-01.jpg",
+        "fallbackSvg": "assets/images/careers/engineering.svg",
+        "weights": { "R": 3, "I": 1, "A": 0, "S": 0, "E": 0, "C": 0 }
       },
       {
-        "label": "Not Sure",
-        "value": 1
-      },
-      {
-        "label": "Dislike",
-        "value": 0
+        "id": "B",
+        "label": "Working in a Science Laboratory",
+        "value": 1,
+        "imageUrl": "assets/images/photos/pq-03.jpg",
+        "fallbackSvg": "assets/images/careers/laboratory.svg",
+        "weights": { "R": 1, "I": 3, "A": 0, "S": 0, "E": 0, "C": 1 }
       }
     ],
-    "categoryWeights": {
-      "R": 3,
-      "I": 1,
-      "A": 0,
-      "S": 0,
-      "E": 0,
-      "C": 0
-    }
+    "categoryWeights": { "R": 3, "I": 3, "A": 0, "S": 0, "E": 0, "C": 1 }
   },
   {
     "id": "pq-02",
     "testId": "photo-career-quiz",
     "order": 2,
-    "type": "image",
-    "text": "Building & Civil Construction",
-    "description": "Planning structures, inspecting construction sites, and shaping infrastructure.",
-    "imageUrl": "assets/images/photos/pq-02.jpg",
-    "fallbackSvg": "assets/images/careers/construction.svg",
+    "type": "photo_pair",
+    "text": "Which work activity or environment appeals to you more?",
     "required": true,
     "options": [
       {
-        "label": "Like",
-        "value": 2
+        "id": "A",
+        "label": "Building & Civil Construction",
+        "value": 1,
+        "imageUrl": "assets/images/photos/pq-02.jpg",
+        "fallbackSvg": "assets/images/careers/construction.svg",
+        "weights": { "R": 3, "I": 1, "A": 0, "S": 0, "E": 1, "C": 0 }
       },
       {
-        "label": "Not Sure",
-        "value": 1
-      },
-      {
-        "label": "Dislike",
-        "value": 0
+        "id": "B",
+        "label": "Designing Visual Artwork & Interfaces",
+        "value": 1,
+        "imageUrl": "assets/images/photos/pq-07.jpg",
+        "fallbackSvg": "assets/images/careers/design.svg",
+        "weights": { "R": 0, "I": 1, "A": 3, "S": 0, "E": 1, "C": 0 }
       }
     ],
-    "categoryWeights": {
-      "R": 3,
-      "I": 1,
-      "A": 0,
-      "S": 0,
-      "E": 1,
-      "C": 1
-    }
+    "categoryWeights": { "R": 3, "I": 1, "A": 3, "S": 0, "E": 1, "C": 0 }
   },
   {
     "id": "pq-03",
     "testId": "photo-career-quiz",
     "order": 3,
-    "type": "image",
-    "text": "Working in a Science Laboratory",
-    "description": "Running experiments, testing samples, and recording discoveries.",
-    "imageUrl": "assets/images/photos/pq-03.jpg",
-    "fallbackSvg": "assets/images/careers/laboratory.svg",
+    "type": "photo_pair",
+    "text": "Which work activity or environment appeals to you more?",
     "required": true,
     "options": [
       {
-        "label": "Like",
-        "value": 2
+        "id": "A",
+        "label": "Working with Plants, Crops & Nature",
+        "value": 1,
+        "imageUrl": "assets/images/photos/pq-09.jpg",
+        "fallbackSvg": "assets/images/careers/agriculture.svg",
+        "weights": { "R": 3, "I": 2, "A": 0, "S": 0, "E": 0, "C": 0 }
       },
       {
-        "label": "Not Sure",
-        "value": 1
-      },
-      {
-        "label": "Dislike",
-        "value": 0
+        "id": "B",
+        "label": "Healthcare & Caring for Patients",
+        "value": 1,
+        "imageUrl": "assets/images/photos/pq-04.jpg",
+        "fallbackSvg": "assets/images/careers/healthcare.svg",
+        "weights": { "R": 1, "I": 2, "A": 0, "S": 3, "E": 0, "C": 0 }
       }
     ],
-    "categoryWeights": {
-      "R": 1,
-      "I": 3,
-      "A": 0,
-      "S": 0,
-      "E": 0,
-      "C": 1
-    }
+    "categoryWeights": { "R": 3, "I": 2, "A": 0, "S": 3, "E": 0, "C": 0 }
   },
   {
     "id": "pq-04",
     "testId": "photo-career-quiz",
     "order": 4,
-    "type": "image",
-    "text": "Healthcare & Caring for Patients",
-    "description": "Supporting patient recovery, diagnosing health needs, and medical care.",
-    "imageUrl": "assets/images/photos/pq-04.jpg",
-    "fallbackSvg": "assets/images/careers/healthcare.svg",
+    "type": "photo_pair",
+    "text": "Which work activity or environment appeals to you more?",
     "required": true,
     "options": [
       {
-        "label": "Like",
-        "value": 2
+        "id": "A",
+        "label": "Business & Startup Entrepreneurship",
+        "value": 1,
+        "imageUrl": "assets/images/photos/pq-10.jpg",
+        "fallbackSvg": "assets/images/careers/business.svg",
+        "weights": { "R": 0, "I": 0, "A": 1, "S": 0, "E": 3, "C": 0 }
       },
       {
-        "label": "Not Sure",
-        "value": 1
-      },
-      {
-        "label": "Dislike",
-        "value": 0
+        "id": "B",
+        "label": "Electronics & Robotics Engineering",
+        "value": 1,
+        "imageUrl": "assets/images/photos/pq-17.jpg",
+        "fallbackSvg": "assets/images/careers/engineering.svg",
+        "weights": { "R": 3, "I": 2, "A": 0, "S": 0, "E": 0, "C": 1 }
       }
     ],
-    "categoryWeights": {
-      "R": 1,
-      "I": 2,
-      "A": 0,
-      "S": 3,
-      "E": 0,
-      "C": 0
-    }
+    "categoryWeights": { "R": 3, "I": 2, "A": 1, "S": 0, "E": 3, "C": 1 }
   },
   {
     "id": "pq-05",
     "testId": "photo-career-quiz",
     "order": 5,
-    "type": "image",
-    "text": "Teaching & Guiding Students",
-    "description": "Explaining ideas in a classroom and helping learners grow.",
-    "imageUrl": "assets/images/photos/pq-05.jpg",
-    "fallbackSvg": "assets/images/careers/teaching.svg",
+    "type": "photo_pair",
+    "text": "Which work activity or environment appeals to you more?",
     "required": true,
     "options": [
       {
-        "label": "Like",
-        "value": 2
+        "id": "A",
+        "label": "Working with Numbers & Finance",
+        "value": 1,
+        "imageUrl": "assets/images/photos/pq-12.jpg",
+        "fallbackSvg": "assets/images/careers/finance.svg",
+        "weights": { "R": 0, "I": 1, "A": 0, "S": 0, "E": 1, "C": 3 }
       },
       {
-        "label": "Not Sure",
-        "value": 1
-      },
-      {
-        "label": "Dislike",
-        "value": 0
+        "id": "B",
+        "label": "Carpentry & Fine Woodworking",
+        "value": 1,
+        "imageUrl": "assets/images/photos/pq-22.jpg",
+        "fallbackSvg": "assets/images/careers/construction.svg",
+        "weights": { "R": 3, "I": 0, "A": 1, "S": 0, "E": 0, "C": 0 }
       }
     ],
-    "categoryWeights": {
-      "R": 0,
-      "I": 1,
-      "A": 1,
-      "S": 3,
-      "E": 0,
-      "C": 0
-    }
+    "categoryWeights": { "R": 3, "I": 1, "A": 1, "S": 0, "E": 1, "C": 3 }
   },
   {
     "id": "pq-06",
     "testId": "photo-career-quiz",
     "order": 6,
-    "type": "image",
-    "text": "Working with Computers & Code",
-    "description": "Writing software, building digital tools, and solving tech challenges.",
-    "imageUrl": "assets/images/photos/pq-06.jpg",
-    "fallbackSvg": "assets/images/careers/programming.svg",
+    "type": "photo_pair",
+    "text": "Which work activity or environment appeals to you more?",
     "required": true,
     "options": [
       {
-        "label": "Like",
-        "value": 2
+        "id": "A",
+        "label": "Working with Computers & Code",
+        "value": 1,
+        "imageUrl": "assets/images/photos/pq-06.jpg",
+        "fallbackSvg": "assets/images/careers/programming.svg",
+        "weights": { "R": 1, "I": 3, "A": 0, "S": 0, "E": 0, "C": 2 }
       },
       {
-        "label": "Not Sure",
-        "value": 1
-      },
-      {
-        "label": "Dislike",
-        "value": 0
+        "id": "B",
+        "label": "Photography, Video & Media Production",
+        "value": 1,
+        "imageUrl": "assets/images/photos/pq-08.jpg",
+        "fallbackSvg": "assets/images/careers/journalism.svg",
+        "weights": { "R": 1, "I": 0, "A": 3, "S": 0, "E": 2, "C": 0 }
       }
     ],
-    "categoryWeights": {
-      "R": 1,
-      "I": 3,
-      "A": 1,
-      "S": 0,
-      "E": 0,
-      "C": 2
-    }
+    "categoryWeights": { "R": 1, "I": 3, "A": 3, "S": 0, "E": 2, "C": 2 }
   },
   {
     "id": "pq-07",
     "testId": "photo-career-quiz",
     "order": 7,
-    "type": "image",
-    "text": "Designing Visual Artwork & Interfaces",
-    "description": "Creating graphics, digital layouts, and visual brand experiences.",
-    "imageUrl": "assets/images/photos/pq-07.jpg",
-    "fallbackSvg": "assets/images/careers/design.svg",
+    "type": "photo_pair",
+    "text": "Which work activity or environment appeals to you more?",
     "required": true,
     "options": [
       {
-        "label": "Like",
-        "value": 2
+        "id": "A",
+        "label": "Environmental Field Research",
+        "value": 1,
+        "imageUrl": "assets/images/photos/pq-20.jpg",
+        "fallbackSvg": "assets/images/careers/environment.svg",
+        "weights": { "R": 2, "I": 3, "A": 0, "S": 1, "E": 0, "C": 0 }
       },
       {
-        "label": "Not Sure",
-        "value": 1
-      },
-      {
-        "label": "Dislike",
-        "value": 0
+        "id": "B",
+        "label": "Teaching & Guiding Students",
+        "value": 1,
+        "imageUrl": "assets/images/photos/pq-05.jpg",
+        "fallbackSvg": "assets/images/careers/teaching.svg",
+        "weights": { "R": 0, "I": 1, "A": 1, "S": 3, "E": 0, "C": 0 }
       }
     ],
-    "categoryWeights": {
-      "R": 0,
-      "I": 1,
-      "A": 3,
-      "S": 0,
-      "E": 1,
-      "C": 0
-    }
+    "categoryWeights": { "R": 2, "I": 3, "A": 1, "S": 3, "E": 0, "C": 0 }
   },
   {
     "id": "pq-08",
     "testId": "photo-career-quiz",
     "order": 8,
-    "type": "image",
-    "text": "Photography, Video & Media Production",
-    "description": "Capturing visual stories, directing media, and producing digital content.",
-    "imageUrl": "assets/images/photos/pq-08.jpg",
-    "fallbackSvg": "assets/images/careers/journalism.svg",
+    "type": "photo_pair",
+    "text": "Which work activity or environment appeals to you more?",
     "required": true,
     "options": [
       {
-        "label": "Like",
-        "value": 2
+        "id": "A",
+        "label": "Leading a Team & Presenting Strategy",
+        "value": 1,
+        "imageUrl": "assets/images/photos/pq-11.jpg",
+        "fallbackSvg": "assets/images/careers/business.svg",
+        "weights": { "R": 0, "I": 0, "A": 0, "S": 1, "E": 3, "C": 1 }
       },
       {
-        "label": "Not Sure",
-        "value": 1
-      },
-      {
-        "label": "Dislike",
-        "value": 0
+        "id": "B",
+        "label": "Microbiology & Medical Diagnostics",
+        "value": 1,
+        "imageUrl": "assets/images/photos/pq-24.jpg",
+        "fallbackSvg": "assets/images/careers/laboratory.svg",
+        "weights": { "R": 0, "I": 3, "A": 0, "S": 1, "E": 0, "C": 1 }
       }
     ],
-    "categoryWeights": {
-      "R": 1,
-      "I": 0,
-      "A": 3,
-      "S": 0,
-      "E": 2,
-      "C": 0
-    }
+    "categoryWeights": { "R": 0, "I": 3, "A": 0, "S": 1, "E": 3, "C": 1 }
   },
   {
     "id": "pq-09",
     "testId": "photo-career-quiz",
     "order": 9,
-    "type": "image",
-    "text": "Working with Plants, Crops & Nature",
-    "description": "Cultivating greenhouses, studying soil health, and outdoor agronomy.",
-    "imageUrl": "assets/images/photos/pq-09.jpg",
-    "fallbackSvg": "assets/images/careers/agriculture.svg",
+    "type": "photo_pair",
+    "text": "Which work activity or environment appeals to you more?",
     "required": true,
     "options": [
       {
-        "label": "Like",
-        "value": 2
+        "id": "A",
+        "label": "Office Administration & Records",
+        "value": 1,
+        "imageUrl": "assets/images/photos/pq-21.jpg",
+        "fallbackSvg": "assets/images/careers/admin.svg",
+        "weights": { "R": 0, "I": 0, "A": 0, "S": 0, "E": 1, "C": 3 }
       },
       {
-        "label": "Not Sure",
-        "value": 1
-      },
-      {
-        "label": "Dislike",
-        "value": 0
+        "id": "B",
+        "label": "Data Analysis & Statistical Charts",
+        "value": 1,
+        "imageUrl": "assets/images/photos/pq-13.jpg",
+        "fallbackSvg": "assets/images/careers/data.svg",
+        "weights": { "R": 0, "I": 3, "A": 0, "S": 0, "E": 0, "C": 2 }
       }
     ],
-    "categoryWeights": {
-      "R": 3,
-      "I": 2,
-      "A": 0,
-      "S": 0,
-      "E": 0,
-      "C": 0
-    }
+    "categoryWeights": { "R": 0, "I": 3, "A": 0, "S": 0, "E": 1, "C": 3 }
   },
   {
     "id": "pq-10",
     "testId": "photo-career-quiz",
     "order": 10,
-    "type": "image",
-    "text": "Business & Startup Entrepreneurship",
-    "description": "Launching new ideas, pitching ventures, and building products.",
-    "imageUrl": "assets/images/photos/pq-10.jpg",
-    "fallbackSvg": "assets/images/careers/business.svg",
+    "type": "photo_pair",
+    "text": "Which work activity or environment appeals to you more?",
     "required": true,
     "options": [
       {
-        "label": "Like",
-        "value": 2
+        "id": "A",
+        "label": "Writing, Journalism & Publishing",
+        "value": 1,
+        "imageUrl": "assets/images/photos/pq-14.jpg",
+        "fallbackSvg": "assets/images/careers/journalism.svg",
+        "weights": { "R": 0, "I": 1, "A": 3, "S": 1, "E": 1, "C": 0 }
       },
       {
-        "label": "Not Sure",
-        "value": 1
-      },
-      {
-        "label": "Dislike",
-        "value": 0
+        "id": "B",
+        "label": "Helping Communities & Social Support",
+        "value": 1,
+        "imageUrl": "assets/images/photos/pq-15.jpg",
+        "fallbackSvg": "assets/images/careers/social.svg",
+        "weights": { "R": 0, "I": 0, "A": 0, "S": 3, "E": 1, "C": 0 }
       }
     ],
-    "categoryWeights": {
-      "R": 0,
-      "I": 0,
-      "A": 1,
-      "S": 0,
-      "E": 3,
-      "C": 0
-    }
+    "categoryWeights": { "R": 0, "I": 1, "A": 3, "S": 3, "E": 1, "C": 0 }
   },
   {
     "id": "pq-11",
     "testId": "photo-career-quiz",
     "order": 11,
-    "type": "image",
-    "text": "Leading a Team & Presenting Strategy",
-    "description": "Running project meetings, guiding teams, and making key decisions.",
-    "imageUrl": "assets/images/photos/pq-11.jpg",
-    "fallbackSvg": "assets/images/careers/business.svg",
+    "type": "photo_pair",
+    "text": "Which work activity or environment appeals to you more?",
     "required": true,
     "options": [
       {
-        "label": "Like",
-        "value": 2
+        "id": "A",
+        "label": "Architecture & Spatial Blueprints",
+        "value": 1,
+        "imageUrl": "assets/images/photos/pq-16.jpg",
+        "fallbackSvg": "assets/images/careers/architecture.svg",
+        "weights": { "R": 2, "I": 1, "A": 3, "S": 0, "E": 0, "C": 0 }
       },
       {
-        "label": "Not Sure",
-        "value": 1
-      },
-      {
-        "label": "Dislike",
-        "value": 0
+        "id": "B",
+        "label": "Marketing & Brand Campaigns",
+        "value": 1,
+        "imageUrl": "assets/images/photos/pq-18.jpg",
+        "fallbackSvg": "assets/images/careers/business.svg",
+        "weights": { "R": 0, "I": 0, "A": 2, "S": 1, "E": 3, "C": 0 }
       }
     ],
-    "categoryWeights": {
-      "R": 0,
-      "I": 0,
-      "A": 0,
-      "S": 1,
-      "E": 3,
-      "C": 1
-    }
+    "categoryWeights": { "R": 2, "I": 1, "A": 3, "S": 1, "E": 3, "C": 0 }
   },
   {
     "id": "pq-12",
     "testId": "photo-career-quiz",
     "order": 12,
-    "type": "image",
-    "text": "Working with Numbers & Finance",
-    "description": "Managing accounts, checking financial budgets, and auditing reports.",
-    "imageUrl": "assets/images/photos/pq-12.jpg",
-    "fallbackSvg": "assets/images/careers/finance.svg",
+    "type": "photo_pair",
+    "text": "Which work activity or environment appeals to you more?",
     "required": true,
     "options": [
       {
-        "label": "Like",
-        "value": 2
+        "id": "A",
+        "label": "Accounting, Tax & Financial Auditing",
+        "value": 1,
+        "imageUrl": "assets/images/photos/pq-33.jpg",
+        "fallbackSvg": "assets/images/careers/finance.svg",
+        "weights": { "R": 0, "I": 1, "A": 0, "S": 0, "E": 0, "C": 3 }
       },
       {
-        "label": "Not Sure",
-        "value": 1
-      },
-      {
-        "label": "Dislike",
-        "value": 0
+        "id": "B",
+        "label": "Music Production & Audio Studio",
+        "value": 1,
+        "imageUrl": "assets/images/photos/pq-26.jpg",
+        "fallbackSvg": "assets/images/careers/design.svg",
+        "weights": { "R": 1, "I": 0, "A": 3, "S": 0, "E": 0, "C": 0 }
       }
     ],
-    "categoryWeights": {
-      "R": 0,
-      "I": 1,
-      "A": 0,
-      "S": 0,
-      "E": 1,
-      "C": 3
-    }
+    "categoryWeights": { "R": 1, "I": 1, "A": 3, "S": 0, "E": 0, "C": 3 }
   },
   {
     "id": "pq-13",
     "testId": "photo-career-quiz",
     "order": 13,
-    "type": "image",
-    "text": "Data Analysis & Statistical Charts",
-    "description": "Turning complex numbers and trends into clear insights.",
-    "imageUrl": "assets/images/photos/pq-13.jpg",
-    "fallbackSvg": "assets/images/careers/data.svg",
+    "type": "photo_pair",
+    "text": "Which work activity or environment appeals to you more?",
     "required": true,
     "options": [
       {
-        "label": "Like",
-        "value": 2
+        "id": "A",
+        "label": "Psychology & Personal Counselling",
+        "value": 1,
+        "imageUrl": "assets/images/photos/pq-28.jpg",
+        "fallbackSvg": "assets/images/careers/social.svg",
+        "weights": { "R": 0, "I": 1, "A": 0, "S": 3, "E": 0, "C": 0 }
       },
       {
-        "label": "Not Sure",
-        "value": 1
-      },
-      {
-        "label": "Dislike",
-        "value": 0
+        "id": "B",
+        "label": "Law, Contracts & Legal Advocacy",
+        "value": 1,
+        "imageUrl": "assets/images/photos/pq-19.jpg",
+        "fallbackSvg": "assets/images/careers/law.svg",
+        "weights": { "R": 0, "I": 2, "A": 0, "S": 1, "E": 3, "C": 1 }
       }
     ],
-    "categoryWeights": {
-      "R": 0,
-      "I": 3,
-      "A": 0,
-      "S": 0,
-      "E": 0,
-      "C": 3
-    }
+    "categoryWeights": { "R": 0, "I": 2, "A": 0, "S": 3, "E": 3, "C": 1 }
   },
   {
     "id": "pq-14",
     "testId": "photo-career-quiz",
     "order": 14,
-    "type": "image",
-    "text": "Writing, Journalism & Publishing",
-    "description": "Drafting stories, interviewing people, and communicating clearly in print.",
-    "imageUrl": "assets/images/photos/pq-14.jpg",
-    "fallbackSvg": "assets/images/careers/journalism.svg",
+    "type": "photo_pair",
+    "text": "Which work activity or environment appeals to you more?",
     "required": true,
     "options": [
       {
-        "label": "Like",
-        "value": 2
+        "id": "A",
+        "label": "Sports Physiotherapy & Rehabilitation",
+        "value": 1,
+        "imageUrl": "assets/images/photos/pq-29.jpg",
+        "fallbackSvg": "assets/images/careers/healthcare.svg",
+        "weights": { "R": 1, "I": 1, "A": 0, "S": 3, "E": 0, "C": 0 }
       },
       {
-        "label": "Not Sure",
-        "value": 1
-      },
-      {
-        "label": "Dislike",
-        "value": 0
+        "id": "B",
+        "label": "Supply Chain & Inventory Logistics",
+        "value": 1,
+        "imageUrl": "assets/images/photos/pq-34.jpg",
+        "fallbackSvg": "assets/images/careers/admin.svg",
+        "weights": { "R": 1, "I": 0, "A": 0, "S": 0, "E": 1, "C": 3 }
       }
     ],
-    "categoryWeights": {
-      "R": 0,
-      "I": 1,
-      "A": 3,
-      "S": 1,
-      "E": 1,
-      "C": 0
-    }
+    "categoryWeights": { "R": 1, "I": 1, "A": 0, "S": 3, "E": 1, "C": 3 }
   },
   {
     "id": "pq-15",
     "testId": "photo-career-quiz",
     "order": 15,
-    "type": "image",
-    "text": "Helping Communities & Social Support",
-    "description": "Supporting families, organizing welfare drives, and counselling people.",
-    "imageUrl": "assets/images/photos/pq-15.jpg",
-    "fallbackSvg": "assets/images/careers/social.svg",
+    "type": "photo_pair",
+    "text": "Which work activity or environment appeals to you more?",
     "required": true,
     "options": [
       {
-        "label": "Like",
-        "value": 2
+        "id": "A",
+        "label": "Public Speaking & Conference Stage",
+        "value": 1,
+        "imageUrl": "assets/images/photos/pq-31.jpg",
+        "fallbackSvg": "assets/images/careers/business.svg",
+        "weights": { "R": 0, "I": 0, "A": 1, "S": 1, "E": 3, "C": 0 }
       },
       {
-        "label": "Not Sure",
-        "value": 1
-      },
-      {
-        "label": "Dislike",
-        "value": 0
+        "id": "B",
+        "label": "Quality Control & Precision Inspection",
+        "value": 1,
+        "imageUrl": "assets/images/photos/pq-35.jpg",
+        "fallbackSvg": "assets/images/careers/data.svg",
+        "weights": { "R": 1, "I": 1, "A": 0, "S": 0, "E": 0, "C": 3 }
       }
     ],
-    "categoryWeights": {
-      "R": 0,
-      "I": 0,
-      "A": 0,
-      "S": 3,
-      "E": 1,
-      "C": 0
-    }
+    "categoryWeights": { "R": 1, "I": 1, "A": 1, "S": 1, "E": 3, "C": 3 }
   },
   {
     "id": "pq-16",
     "testId": "photo-career-quiz",
     "order": 16,
-    "type": "image",
-    "text": "Architecture & Spatial Blueprints",
-    "description": "Sketching building designs, floor plans, and creative spaces.",
-    "imageUrl": "assets/images/photos/pq-16.jpg",
-    "fallbackSvg": "assets/images/careers/architecture.svg",
+    "type": "photo_pair",
+    "text": "Which work activity or environment appeals to you more?",
     "required": true,
     "options": [
       {
-        "label": "Like",
-        "value": 2
+        "id": "A",
+        "label": "Hospitality & Guest Care Management",
+        "value": 1,
+        "imageUrl": "assets/images/photos/pq-30.jpg",
+        "fallbackSvg": "assets/images/careers/social.svg",
+        "weights": { "R": 0, "I": 0, "A": 0, "S": 3, "E": 1, "C": 0 }
       },
       {
-        "label": "Not Sure",
-        "value": 1
-      },
-      {
-        "label": "Dislike",
-        "value": 0
+        "id": "B",
+        "label": "Land Surveying & Field Engineering",
+        "value": 1,
+        "imageUrl": "assets/images/photos/pq-23.jpg",
+        "fallbackSvg": "assets/images/careers/engineering.svg",
+        "weights": { "R": 3, "I": 1, "A": 0, "S": 0, "E": 0, "C": 1 }
       }
     ],
-    "categoryWeights": {
-      "R": 2,
-      "I": 1,
-      "A": 3,
-      "S": 0,
-      "E": 0,
-      "C": 0
-    }
+    "categoryWeights": { "R": 3, "I": 1, "A": 0, "S": 3, "E": 1, "C": 1 }
   },
   {
     "id": "pq-17",
     "testId": "photo-career-quiz",
     "order": 17,
-    "type": "image",
-    "text": "Electronics & Robotics Engineering",
-    "description": "Testing circuit boards, sensors, and hardware prototypes.",
-    "imageUrl": "assets/images/photos/pq-17.jpg",
-    "fallbackSvg": "assets/images/careers/engineering.svg",
+    "type": "photo_pair",
+    "text": "Which work activity or environment appeals to you more?",
     "required": true,
     "options": [
       {
-        "label": "Like",
-        "value": 2
+        "id": "A",
+        "label": "Astronomy & Observatory Research",
+        "value": 1,
+        "imageUrl": "assets/images/photos/pq-25.jpg",
+        "fallbackSvg": "assets/images/careers/data.svg",
+        "weights": { "R": 1, "I": 3, "A": 0, "S": 0, "E": 0, "C": 0 }
       },
       {
-        "label": "Not Sure",
-        "value": 1
-      },
-      {
-        "label": "Dislike",
-        "value": 0
+        "id": "B",
+        "label": "Client Partnerships & Deal Negotiation",
+        "value": 1,
+        "imageUrl": "assets/images/photos/pq-32.jpg",
+        "fallbackSvg": "assets/images/careers/law.svg",
+        "weights": { "R": 0, "I": 0, "A": 0, "S": 1, "E": 3, "C": 1 }
       }
     ],
-    "categoryWeights": {
-      "R": 3,
-      "I": 2,
-      "A": 0,
-      "S": 0,
-      "E": 0,
-      "C": 1
-    }
+    "categoryWeights": { "R": 1, "I": 3, "A": 0, "S": 1, "E": 3, "C": 1 }
   },
   {
     "id": "pq-18",
     "testId": "photo-career-quiz",
     "order": 18,
-    "type": "image",
-    "text": "Marketing & Brand Campaigns",
-    "description": "Understanding audiences, pitching creative campaigns, and growing brands.",
-    "imageUrl": "assets/images/photos/pq-18.jpg",
-    "fallbackSvg": "assets/images/careers/business.svg",
+    "type": "photo_pair",
+    "text": "Which work activity or environment appeals to you more?",
     "required": true,
     "options": [
       {
-        "label": "Like",
-        "value": 2
+        "id": "A",
+        "label": "Interior Design & Material Styling",
+        "value": 1,
+        "imageUrl": "assets/images/photos/pq-27.jpg",
+        "fallbackSvg": "assets/images/careers/architecture.svg",
+        "weights": { "R": 1, "I": 0, "A": 3, "S": 0, "E": 1, "C": 0 }
       },
       {
-        "label": "Not Sure",
-        "value": 1
-      },
-      {
-        "label": "Dislike",
-        "value": 0
+        "id": "B",
+        "label": "Library Archiving & Information Systems",
+        "value": 1,
+        "imageUrl": "assets/images/photos/pq-36.jpg",
+        "fallbackSvg": "assets/images/careers/admin.svg",
+        "weights": { "R": 0, "I": 1, "A": 1, "S": 0, "E": 0, "C": 3 }
       }
     ],
-    "categoryWeights": {
-      "R": 0,
-      "I": 0,
-      "A": 2,
-      "S": 1,
-      "E": 3,
-      "C": 0
-    }
-  },
-  {
-    "id": "pq-19",
-    "testId": "photo-career-quiz",
-    "order": 19,
-    "type": "image",
-    "text": "Law, Contracts & Legal Advocacy",
-    "description": "Researching legal rules, preparing cases, and speaking up for clients.",
-    "imageUrl": "assets/images/photos/pq-19.jpg",
-    "fallbackSvg": "assets/images/careers/law.svg",
-    "required": true,
-    "options": [
-      {
-        "label": "Like",
-        "value": 2
-      },
-      {
-        "label": "Not Sure",
-        "value": 1
-      },
-      {
-        "label": "Dislike",
-        "value": 0
-      }
-    ],
-    "categoryWeights": {
-      "R": 0,
-      "I": 2,
-      "A": 0,
-      "S": 1,
-      "E": 3,
-      "C": 1
-    }
-  },
-  {
-    "id": "pq-20",
-    "testId": "photo-career-quiz",
-    "order": 20,
-    "type": "image",
-    "text": "Environmental Field Research",
-    "description": "Studying ecosystems, testing water quality, and protecting habitats.",
-    "imageUrl": "assets/images/photos/pq-20.jpg",
-    "fallbackSvg": "assets/images/careers/environment.svg",
-    "required": true,
-    "options": [
-      {
-        "label": "Like",
-        "value": 2
-      },
-      {
-        "label": "Not Sure",
-        "value": 1
-      },
-      {
-        "label": "Dislike",
-        "value": 0
-      }
-    ],
-    "categoryWeights": {
-      "R": 2,
-      "I": 3,
-      "A": 0,
-      "S": 1,
-      "E": 0,
-      "C": 0
-    }
-  },
-  {
-    "id": "pq-21",
-    "testId": "photo-career-quiz",
-    "order": 21,
-    "type": "image",
-    "text": "Office Administration & Records",
-    "description": "Organizing important files, coordinating schedules, and ensuring smooth operations.",
-    "imageUrl": "assets/images/photos/pq-21.jpg",
-    "fallbackSvg": "assets/images/careers/admin.svg",
-    "required": true,
-    "options": [
-      {
-        "label": "Like",
-        "value": 2
-      },
-      {
-        "label": "Not Sure",
-        "value": 1
-      },
-      {
-        "label": "Dislike",
-        "value": 0
-      }
-    ],
-    "categoryWeights": {
-      "R": 0,
-      "I": 0,
-      "A": 0,
-      "S": 0,
-      "E": 1,
-      "C": 3
-    }
+    "categoryWeights": { "R": 1, "I": 1, "A": 3, "S": 0, "E": 1, "C": 3 }
   },
   {
     "id": "cd-01",

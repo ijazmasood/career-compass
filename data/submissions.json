@@ -74,12 +74,16 @@
     "status": "completed",
     "startedAt": "2026-11-19T08:40:00",
     "completedAt": "2026-11-19T08:52:00",
-    "answers": { "pq-01": 2, "pq-02": 2, "pq-17": 2 },
-    "riasecScores": { "R": 91, "I": 76, "A": 34, "S": 28, "E": 41, "C": 62 },
+    "answers": {
+      "pq-01": "A", "pq-02": "A", "pq-03": "A", "pq-04": "B", "pq-05": "B", "pq-06": "A",
+      "pq-07": "A", "pq-08": "B", "pq-09": "B", "pq-10": "A", "pq-11": "A", "pq-12": "A",
+      "pq-13": "B", "pq-14": "B", "pq-15": "B", "pq-16": "B", "pq-17": "A", "pq-18": "A"
+    },
+    "riasecScores": { "R": 96, "I": 85, "A": 45, "S": 18, "E": 26, "C": 65 },
     "topCareers": [
-      { "id": "career-mechanical-engineer", "title": "Mechanical Engineer", "match": 95 },
-      { "id": "career-civil-engineer", "title": "Civil Engineer", "match": 88 },
-      { "id": "career-software-dev", "title": "Software Developer", "match": 82 }
+      { "id": "career-cybersecurity", "title": "Cybersecurity Analyst", "match": 90 },
+      { "id": "career-mechanical-engineer", "title": "Mechanical Engineer", "match": 89 },
+      { "id": "career-software-dev", "title": "Software Developer", "match": 86 }
     ],
     "counsellorNotes": "Strong preference for hands-on mechanical and engineering environments.",
     "isDemo": true
@@ -108,12 +112,16 @@
     "status": "completed",
     "startedAt": "2026-11-20T10:15:00",
     "completedAt": "2026-11-20T10:27:00",
-    "answers": { "pq-07": 2, "pq-08": 2, "pq-16": 2 },
-    "riasecScores": { "R": 36, "I": 54, "A": 94, "S": 58, "E": 62, "C": 33 },
+    "answers": {
+      "pq-01": "B", "pq-02": "B", "pq-03": "B", "pq-04": "A", "pq-05": "B", "pq-06": "B",
+      "pq-07": "B", "pq-08": "A", "pq-09": "B", "pq-10": "A", "pq-11": "A", "pq-12": "B",
+      "pq-13": "A", "pq-14": "A", "pq-15": "A", "pq-16": "A", "pq-17": "B", "pq-18": "A"
+    },
+    "riasecScores": { "R": 39, "I": 42, "A": 100, "S": 86, "E": 67, "C": 19 },
     "topCareers": [
-      { "id": "career-graphic-designer", "title": "Graphic Designer", "match": 95 },
-      { "id": "career-ux-designer", "title": "UX / UI Designer", "match": 91 },
-      { "id": "career-content-creator", "title": "Content Creator", "match": 88 }
+      { "id": "career-graphic-designer", "title": "Graphic Designer", "match": 92 },
+      { "id": "career-content-creator", "title": "Content Creator", "match": 88 },
+      { "id": "career-ux-designer", "title": "UX / UI Designer", "match": 81 }
     ],
     "counsellorNotes": "Recommend building a visual design portfolio before senior year.",
     "isDemo": true
@@ -176,12 +184,16 @@
     "status": "completed",
     "startedAt": "2026-11-21T09:15:00",
     "completedAt": "2026-11-21T09:28:00",
-    "answers": { "pq-09": 2, "pq-20": 2, "pq-03": 2 },
-    "riasecScores": { "R": 82, "I": 79, "A": 35, "S": 56, "E": 34, "C": 44 },
+    "answers": {
+      "pq-01": "B", "pq-02": "A", "pq-03": "A", "pq-04": "B", "pq-05": "B", "pq-06": "A",
+      "pq-07": "A", "pq-08": "B", "pq-09": "B", "pq-10": "B", "pq-11": "A", "pq-12": "A",
+      "pq-13": "A", "pq-14": "A", "pq-15": "B", "pq-16": "B", "pq-17": "A", "pq-18": "B"
+    },
+    "riasecScores": { "R": 86, "I": 91, "A": 23, "S": 50, "E": 7, "C": 65 },
     "topCareers": [
-      { "id": "career-environmental-scientist", "title": "Environmental Scientist", "match": 93 },
-      { "id": "career-veterinarian", "title": "Veterinarian", "match": 89 },
-      { "id": "career-research-scientist", "title": "Research Scientist", "match": 82 }
+      { "id": "career-environmental-scientist", "title": "Environmental Scientist", "match": 88 },
+      { "id": "career-veterinarian", "title": "Veterinarian", "match": 87 },
+      { "id": "career-research-scientist", "title": "Research Scientist", "match": 85 }
     ],
     "counsellorNotes": "Strong outdoor and ecological curiosity.",
     "isDemo": true
@@ -227,12 +239,16 @@
     "status": "completed",
     "startedAt": "2026-11-21T08:50:00",
     "completedAt": "2026-11-21T09:02:00",
-    "answers": { "pq-19": 2, "pq-14": 2, "pq-18": 2 },
-    "riasecScores": { "R": 20, "I": 60, "A": 74, "S": 71, "E": 91, "C": 42 },
+    "answers": {
+      "pq-01": "B", "pq-02": "B", "pq-03": "B", "pq-04": "A", "pq-05": "A", "pq-06": "B",
+      "pq-07": "B", "pq-08": "A", "pq-09": "A", "pq-10": "A", "pq-11": "B", "pq-12": "B",
+      "pq-13": "B", "pq-14": "A", "pq-15": "A", "pq-16": "A", "pq-17": "B", "pq-18": "A"
+    },
+    "riasecScores": { "R": 21, "I": 36, "A": 91, "S": 82, "E": 96, "C": 38 },
     "topCareers": [
-      { "id": "career-lawyer", "title": "Lawyer", "match": 93 },
-      { "id": "career-journalist", "title": "Journalist", "match": 91 },
-      { "id": "career-marketing", "title": "Marketing Specialist", "match": 86 }
+      { "id": "career-journalist", "title": "Journalist", "match": 86 },
+      { "id": "career-social-worker", "title": "Social Worker", "match": 82 },
+      { "id": "career-lawyer", "title": "Lawyer", "match": 81 }
     ],
     "counsellorNotes": "",
     "isDemo": true
@@ -261,12 +277,16 @@
     "status": "completed",
     "startedAt": "2026-11-15T14:00:00",
     "completedAt": "2026-11-15T14:11:00",
-    "answers": { "pq-01": 2, "pq-06": 2, "pq-17": 2 },
-    "riasecScores": { "R": 87, "I": 84, "A": 31, "S": 28, "E": 36, "C": 58 },
+    "answers": {
+      "pq-01": "A", "pq-02": "A", "pq-03": "A", "pq-04": "B", "pq-05": "B", "pq-06": "A",
+      "pq-07": "A", "pq-08": "B", "pq-09": "B", "pq-10": "A", "pq-11": "A", "pq-12": "A",
+      "pq-13": "B", "pq-14": "B", "pq-15": "B", "pq-16": "B", "pq-17": "A", "pq-18": "B"
+    },
+    "riasecScores": { "R": 93, "I": 88, "A": 36, "S": 18, "E": 22, "C": 77 },
     "topCareers": [
-      { "id": "career-mechanical-engineer", "title": "Mechanical Engineer", "match": 92 },
-      { "id": "career-cybersecurity", "title": "Cybersecurity Analyst", "match": 88 },
-      { "id": "career-software-dev", "title": "Software Developer", "match": 85 }
+      { "id": "career-cybersecurity", "title": "Cybersecurity Analyst", "match": 93 },
+      { "id": "career-mechanical-engineer", "title": "Mechanical Engineer", "match": 91 },
+      { "id": "career-software-dev", "title": "Software Developer", "match": 88 }
     ],
     "counsellorNotes": "",
     "isDemo": true
@@ -329,12 +349,16 @@
     "status": "completed",
     "startedAt": "2026-11-06T12:10:00",
     "completedAt": "2026-11-06T12:22:00",
-    "answers": { "pq-16": 2, "pq-07": 2, "pq-02": 2 },
-    "riasecScores": { "R": 75, "I": 71, "A": 89, "S": 36, "E": 45, "C": 52 },
+    "answers": {
+      "pq-01": "A", "pq-02": "B", "pq-03": "A", "pq-04": "B", "pq-05": "B", "pq-06": "B",
+      "pq-07": "A", "pq-08": "B", "pq-09": "B", "pq-10": "A", "pq-11": "A", "pq-12": "B",
+      "pq-13": "B", "pq-14": "B", "pq-15": "B", "pq-16": "B", "pq-17": "A", "pq-18": "A"
+    },
+    "riasecScores": { "R": 89, "I": 73, "A": 86, "S": 18, "E": 33, "C": 46 },
     "topCareers": [
-      { "id": "career-architect", "title": "Architect", "match": 95 },
-      { "id": "career-civil-engineer", "title": "Civil Engineer", "match": 84 },
-      { "id": "career-graphic-designer", "title": "Graphic Designer", "match": 83 }
+      { "id": "career-architect", "title": "Architect", "match": 86 },
+      { "id": "career-software-dev", "title": "Software Developer", "match": 81 },
+      { "id": "career-cybersecurity", "title": "Cybersecurity Analyst", "match": 79 }
     ],
     "counsellorNotes": "Strong spatial and architectural portfolio candidate.",
     "isDemo": true
@@ -380,12 +404,16 @@
     "status": "completed",
     "startedAt": "2026-11-14T10:15:00",
     "completedAt": "2026-11-14T10:26:00",
-    "answers": { "pq-06": 2, "pq-12": 2, "pq-13": 2 },
-    "riasecScores": { "R": 44, "I": 88, "A": 28, "S": 32, "E": 46, "C": 87 },
+    "answers": {
+      "pq-01": "B", "pq-02": "A", "pq-03": "A", "pq-04": "B", "pq-05": "A", "pq-06": "A",
+      "pq-07": "A", "pq-08": "B", "pq-09": "B", "pq-10": "A", "pq-11": "A", "pq-12": "A",
+      "pq-13": "B", "pq-14": "B", "pq-15": "B", "pq-16": "B", "pq-17": "A", "pq-18": "B"
+    },
+    "riasecScores": { "R": 75, "I": 97, "A": 32, "S": 18, "E": 26, "C": 92 },
     "topCareers": [
-      { "id": "career-data-analyst", "title": "Data Analyst", "match": 96 },
-      { "id": "career-finance-specialist", "title": "Finance Specialist", "match": 90 },
-      { "id": "career-software-dev", "title": "Software Developer", "match": 88 }
+      { "id": "career-cybersecurity", "title": "Cybersecurity Analyst", "match": 95 },
+      { "id": "career-data-analyst", "title": "Data Analyst", "match": 90 },
+      { "id": "career-software-dev", "title": "Software Developer", "match": 89 }
     ],
     "counsellorNotes": "",
     "isDemo": true
@@ -397,12 +425,16 @@
     "status": "completed",
     "startedAt": "2026-11-21T10:12:00",
     "completedAt": "2026-11-21T10:24:00",
-    "answers": { "pq-10": 2, "pq-11": 2, "pq-18": 2 },
-    "riasecScores": { "R": 48, "I": 49, "A": 68, "S": 52, "E": 89, "C": 46 },
+    "answers": {
+      "pq-01": "B", "pq-02": "B", "pq-03": "B", "pq-04": "A", "pq-05": "A", "pq-06": "B",
+      "pq-07": "B", "pq-08": "A", "pq-09": "A", "pq-10": "A", "pq-11": "B", "pq-12": "B",
+      "pq-13": "B", "pq-14": "B", "pq-15": "A", "pq-16": "A", "pq-17": "B", "pq-18": "A"
+    },
+    "riasecScores": { "R": 21, "I": 33, "A": 91, "S": 68, "E": 100, "C": 50 },
     "topCareers": [
-      { "id": "career-entrepreneur", "title": "Entrepreneur", "match": 93 },
-      { "id": "career-marketing", "title": "Marketing Specialist", "match": 88 },
-      { "id": "career-business-manager", "title": "Business Manager", "match": 85 }
+      { "id": "career-marketing", "title": "Marketing Specialist", "match": 90 },
+      { "id": "career-graphic-designer", "title": "Graphic Designer", "match": 88 },
+      { "id": "career-content-creator", "title": "Content Creator", "match": 88 }
     ],
     "counsellorNotes": "",
     "isDemo": true

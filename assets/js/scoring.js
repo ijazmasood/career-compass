@@ -74,7 +74,7 @@
       const ans = answers ? answers[q.id] : undefined;
       const baseWeights = q.categoryWeights || {};
 
-      if (q.type === 'single_choice') {
+      if (q.type === 'photo_pair' || q.type === 'single_choice') {
         const hasOptionWeights = (q.options || []).some((o) => o.weights);
         if (hasOptionWeights) {
           const perDimMax = { R: 0, I: 0, A: 0, S: 0, E: 0, C: 0 };
@@ -89,7 +89,12 @@
             max[c] += perDimMax[c];
           });
           if (ans !== undefined && ans !== null && ans !== '') {
-            const chosen = (q.options || []).find((o) => o.label === ans || String(o.value) === String(ans));
+            const chosen = (q.options || []).find(
+              (o) =>
+                (o.id !== undefined && String(o.id) === String(ans)) ||
+                o.label === ans ||
+                (q.type !== 'photo_pair' && String(o.value) === String(ans))
+            );
             if (chosen) {
               const val = Number(chosen.value || 1);
               CODES.forEach((c) => {
@@ -385,6 +390,64 @@
     };
   }
 
+  function summarizePhotoChoices(questions, answers) {
+    const pairQuestions = (questions || []).filter((q) => q.type === 'photo_pair');
+    if (pairQuestions.length === 0) return null;
+
+    const chosenScenes = [];
+    const winCounts = { R: 0, I: 0, A: 0, S: 0, E: 0, C: 0 };
+    const totalShown = { R: 0, I: 0, A: 0, S: 0, E: 0, C: 0 };
+
+    function topDimOf(weights) {
+      let best = 'R';
+      let bestVal = -1;
+      CODES.forEach((c) => {
+        const v = Number((weights && weights[c]) || 0);
+        if (v > bestVal) {
+          bestVal = v;
+          best = c;
+        }
+      });
+      return best;
+    }
+
+    pairQuestions.forEach((q) => {
+      const opts = q.options || [];
+      opts.forEach((o) => {
+        const d = topDimOf(o.weights);
+        totalShown[d] += 1;
+      });
+      const ans = answers ? answers[q.id] : undefined;
+      if (ans === undefined || ans === null || ans === '') return;
+      const chosen = opts.find((o) => String(o.id) === String(ans) || o.label === ans);
+      const other = opts.find((o) => o !== chosen) || null;
+      if (chosen) {
+        const primaryCode = topDimOf(chosen.weights);
+        winCounts[primaryCode] += 1;
+        chosenScenes.push({
+          questionId: q.id,
+          order: q.order,
+          optionId: chosen.id || 'A',
+          label: chosen.label,
+          imageUrl: chosen.imageUrl,
+          fallbackSvg: chosen.fallbackSvg,
+          primaryCode,
+          primaryName: DIMENSIONS[primaryCode].short,
+          primaryColor: DIMENSIONS[primaryCode].color,
+          overLabel: other ? other.label : ''
+        });
+      }
+    });
+
+    return {
+      totalPairs: pairQuestions.length,
+      answeredPairs: chosenScenes.length,
+      winCounts,
+      totalShown,
+      chosenScenes
+    };
+  }
+
   global.CGAMSScoring = {
     DIMENSIONS,
     CODES,
@@ -394,6 +457,7 @@
     buildProfileSummary,
     buildStrengthsList,
     scoreSubmission,
-    computeCombinedProfile
+    computeCombinedProfile,
+    summarizePhotoChoices
   };
 })(window);

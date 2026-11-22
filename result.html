@@ -98,7 +98,7 @@
           <h2 class="h4 fw-bold mb-3">Interest Category Breakdown</h2>
           <div class="row g-3 mb-4" id="allSixInterestsStrip"></div>
 
-          <div class="row g-4 mb-4">
+          <div class="row g-4 mb-4 report-charts-row">
             <div class="col-lg-7">
               <div class="cgams-card p-4 h-100">
                 <h3 class="h6 fw-bold mb-3">Interest Scores (%) — Horizontal Comparison</h3>
@@ -118,6 +118,21 @@
           </div>
 
           <div class="row g-3" id="topThreeInterestsGrid"></div>
+        </section>
+
+        <!-- Photo Career Quiz Visual Selections Summary (Shown only for photo_pair submissions) -->
+        <section id="photoChoicesSection" class="mb-4 d-none">
+          <div class="cgams-card p-4">
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+              <div>
+                <h2 class="h5 fw-bold mb-1">Visual Preference Analysis</h2>
+                <p class="small text-secondary mb-0" id="photoChoicesSubtitle">Workplace scenes selected across your pairwise photo comparisons.</p>
+              </div>
+              <div class="small font-mono-num text-secondary" id="photoChoicesCount"></div>
+            </div>
+            <div class="row g-2 mb-3" id="photoChoicesCategoryStats"></div>
+            <div class="row g-3" id="photoChoicesGallery"></div>
+          </div>
         </section>
 
         <!-- Section D: Top 5 Recommended Careers -->

@@ -412,9 +412,17 @@
       ? ansEntries
           .map(([qId, val]) => {
             const q = questions.find((item) => item.id === qId);
-            const qText = q ? q.text : qId;
+            let qText = q ? q.text : qId;
             let displayVal = Array.isArray(val) ? val.join(', ') : val;
-            if (q && !Array.isArray(val) && q.options) {
+            if (q && q.type === 'photo_pair' && q.options) {
+              const optA = q.options[0] || {};
+              const optB = q.options[1] || {};
+              qText = `Pair ${q.order || ''}: ${optA.label || 'Photo A'} vs ${optB.label || 'Photo B'}`;
+              const matched = q.options.find((o, i) => String(o.id || (i === 0 ? 'A' : 'B')) === String(val));
+              if (matched) {
+                displayVal = `Photo ${matched.id || val}: ${matched.label || ''}`;
+              }
+            } else if (q && !Array.isArray(val) && q.options) {
               const matched = q.options.find((o) => String(o.value) === String(val));
               if (matched) displayVal = matched.label;
             }

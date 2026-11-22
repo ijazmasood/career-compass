@@ -271,6 +271,15 @@ a:hover {
 }
 
 @media print {
+  @page {
+    margin: 12mm;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
   body {
     background-color: #ffffff !important;
     color: #000000 !important;
@@ -285,6 +294,8 @@ a:hover {
     box-shadow: none !important;
     border: 1px solid #cbd5e1 !important;
     break-inside: avoid;
+    page-break-inside: avoid;
+    overflow: hidden;
   }
 
   .print-container {

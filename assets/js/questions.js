@@ -60,18 +60,27 @@
     const qHtml = questions
       .map((q, idx) => {
         const w = q.categoryWeights || {};
-        const weightSummary = CGAMSScoring.CODES.filter((c) => Number(w[c] || 0) > 0)
+        let weightSummary = CGAMSScoring.CODES.filter((c) => Number(w[c] || 0) > 0)
           .map((c) => `${c}:${w[c]}`)
           .join(' ');
+        let titleText = q.text;
+        let subInfo = `${q.type} · ${q.required ? 'Required' : 'Optional'}`;
+        if (q.type === 'photo_pair' && Array.isArray(q.options) && q.options.length >= 2) {
+          const optA = q.options[0];
+          const optB = q.options[1];
+          titleText = `Pair ${q.order || idx + 1}: ${optA.label || 'Photo A'} vs ${optB.label || 'Photo B'}`;
+          const sumA = CGAMSScoring.CODES.filter((c) => Number((optA.weights && optA.weights[c]) || 0) > 0).join('');
+          const sumB = CGAMSScoring.CODES.filter((c) => Number((optB.weights && optB.weights[c]) || 0) > 0).join('');
+          weightSummary = `A(${sumA || '—'}) vs B(${sumB || '—'})`;
+          subInfo = `photo_pair · ${q.required ? 'Required' : 'Optional'}`;
+        }
         return `
           <tr>
             <td class="font-mono-num text-secondary">${q.order || idx + 1}</td>
             <td>
-              <div class="fw-semibold text-dark">${escapeHtml(q.text)}</div>
+              <div class="fw-semibold text-dark">${escapeHtml(titleText)}</div>
               <div class="meta-inline mt-1">
-                <span>${escapeHtml(q.type)}</span>
-                <span class="sep">·</span>
-                <span>${q.required ? 'Required' : 'Optional'}</span>
+                <span>${escapeHtml(subInfo)}</span>
               </div>
             </td>
             <td class="font-mono-num small">${escapeHtml(weightSummary || 'Option-based')}</td>
@@ -150,19 +159,39 @@
 
   function toggleQuestionTypeFields(type) {
     $('#qImageConfigBox').toggleClass('d-none', type !== 'image');
-    $('#qOptionsWrapper').toggleClass('d-none', type === 'text');
+    $('#qPhotoPairConfigBox').toggleClass('d-none', type !== 'photo_pair');
+    $('#qBaseWeightsWrapper').toggleClass('d-none', type === 'photo_pair');
+    $('#qOptionsWrapper').toggleClass('d-none', type === 'text' || type === 'photo_pair');
+  }
+
+  function populatePhotoPairFields(options) {
+    const optA = (options && options[0]) || { id: 'A', label: '', imageUrl: '', fallbackSvg: 'assets/images/careers/engineering.svg', weights: {} };
+    const optB = (options && options[1]) || { id: 'B', label: '', imageUrl: '', fallbackSvg: 'assets/images/careers/laboratory.svg', weights: {} };
+    $('#editQPairALabel').val(optA.label || '');
+    $('#editQPairAUrl').val(optA.imageUrl || '');
+    $('#editQPairAFallback').val(optA.fallbackSvg || 'assets/images/careers/engineering.svg');
+    $('#editQPairBLabel').val(optB.label || '');
+    $('#editQPairBUrl').val(optB.imageUrl || '');
+    $('#editQPairBFallback').val(optB.fallbackSvg || 'assets/images/careers/laboratory.svg');
+    CGAMSScoring.CODES.forEach((c) => {
+      $(`#editQPairAW_${c}`).val(Number((optA.weights && optA.weights[c]) || 0));
+      $(`#editQPairBW_${c}`).val(Number((optB.weights && optB.weights[c]) || 0));
+    });
   }
 
   function openQuestionModal(qId) {
     const q = qId ? CGAMSStorage.getQuestions().find((x) => x.id === qId) : null;
     const siblingCount = CGAMSStorage.getQuestionsByTest(selectedTestId).length;
-    const defaultType = selectedTestId === 'photo-career-quiz' ? 'image' : 'likert';
+    const defaultType = selectedTestId === 'photo-career-quiz' ? 'photo_pair' : 'likert';
+    const type = q?.type || defaultType;
 
     $('#editQId').val(q?.id || '');
     $('#editQTestId').val(q?.testId || selectedTestId);
-    $('#editQText').val(q?.text || '');
+    $('#editQText').val(
+      q?.text || (type === 'photo_pair' ? 'Which work activity or environment appeals to you more?' : '')
+    );
     $('#editQDescription').val(q?.description || '');
-    $('#editQType').val(q?.type || defaultType);
+    $('#editQType').val(type);
     $('#editQOrder').val(q?.order || siblingCount + 1);
     $('#editQImageUrl').val(q?.imageUrl || '');
     $('#editQFallbackSvg').val(q?.fallbackSvg || 'assets/images/careers/business.svg');
@@ -173,8 +202,12 @@
       $(`#editQW_${c}`).val(Number(w[c] || 0));
     });
 
-    toggleQuestionTypeFields($('#editQType').val());
-    renderOptionEditorRows(q?.options);
+    toggleQuestionTypeFields(type);
+    if (type === 'photo_pair') {
+      populatePhotoPairFields(q?.options);
+    } else {
+      renderOptionEditorRows(q?.options);
+    }
     new bootstrap.Modal(document.getElementById('adminQuestionModal')).show();
   }
 
@@ -222,7 +255,12 @@
     $('#editQType').on('change', function () {
       const type = $(this).val();
       toggleQuestionTypeFields(type);
-      if (type === 'likert') {
+      if (type === 'photo_pair') {
+        if (!$('#editQText').val().trim()) {
+          $('#editQText').val('Which work activity or environment appeals to you more?');
+        }
+        populatePhotoPairFields(null);
+      } else if (type === 'likert') {
         renderOptionEditorRows([
           { label: 'Strongly Disagree', value: 1 },
           { label: 'Disagree', value: 2 },
@@ -314,26 +352,54 @@
       const type = $('#editQType').val();
       const existing = id ? CGAMSStorage.getQuestions().find((x) => x.id === id) : {};
 
-      const options = [];
-      if (type !== 'text') {
-        $('.q-opt-row').each(function (i) {
-          const lbl = $(this).find('.q-opt-label').val().trim();
-          const val = Number($(this).find('.q-opt-value').val());
-          if (lbl) {
-            const oldOpt = existing?.options && existing.options[i];
-            options.push({
-              ...(oldOpt || {}),
-              label: lbl,
-              value: Number.isNaN(val) ? 1 : val
-            });
+      let options = [];
+      const categoryWeights = {};
+
+      if (type === 'photo_pair') {
+        const wA = {};
+        const wB = {};
+        CGAMSScoring.CODES.forEach((c) => {
+          wA[c] = Number($(`#editQPairAW_${c}`).val()) || 0;
+          wB[c] = Number($(`#editQPairBW_${c}`).val()) || 0;
+          categoryWeights[c] = Math.max(wA[c], wB[c]);
+        });
+        options = [
+          {
+            id: 'A',
+            label: $('#editQPairALabel').val().trim() || 'Photo A',
+            value: 1,
+            imageUrl: $('#editQPairAUrl').val().trim(),
+            fallbackSvg: $('#editQPairAFallback').val().trim() || 'assets/images/careers/engineering.svg',
+            weights: wA
+          },
+          {
+            id: 'B',
+            label: $('#editQPairBLabel').val().trim() || 'Photo B',
+            value: 1,
+            imageUrl: $('#editQPairBUrl').val().trim(),
+            fallbackSvg: $('#editQPairBFallback').val().trim() || 'assets/images/careers/laboratory.svg',
+            weights: wB
           }
+        ];
+      } else {
+        if (type !== 'text') {
+          $('.q-opt-row').each(function (i) {
+            const lbl = $(this).find('.q-opt-label').val().trim();
+            const val = Number($(this).find('.q-opt-value').val());
+            if (lbl) {
+              const oldOpt = existing?.options && existing.options[i];
+              options.push({
+                ...(oldOpt || {}),
+                label: lbl,
+                value: Number.isNaN(val) ? 1 : val
+              });
+            }
+          });
+        }
+        CGAMSScoring.CODES.forEach((c) => {
+          categoryWeights[c] = Number($(`#editQW_${c}`).val()) || 0;
         });
       }
-
-      const categoryWeights = {};
-      CGAMSScoring.CODES.forEach((c) => {
-        categoryWeights[c] = Number($(`#editQW_${c}`).val()) || 0;
-      });
 
       CGAMSStorage.upsertQuestion({
         ...existing,

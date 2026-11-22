@@ -445,7 +445,8 @@
                 <select class="form-select" id="editQType">
                   <option value="likert">Likert Scale (1–5)</option>
                   <option value="interest_scale">Interest Scale (Not Interested – Very Interested)</option>
-                  <option value="image">Photo Scenario (Like / Not Sure / Dislike)</option>
+                  <option value="photo_pair">Photo Pair (Choose 1 of 2)</option>
+                  <option value="image">Single Photo (Like / Not Sure / Dislike)</option>
                   <option value="single_choice">Single Choice</option>
                   <option value="multiple_choice">Multiple Choice</option>
                   <option value="ranking">Ranking</option>
@@ -488,7 +489,53 @@
                 </div>
               </div>
 
-              <div class="col-12">
+              <div class="col-12 d-none" id="qPhotoPairConfigBox">
+                <div class="p-3 border rounded bg-light">
+                  <div class="small fw-bold text-dark mb-2">Photo Pair Comparison (Option A vs Option B)</div>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <div class="p-2 border rounded bg-white">
+                        <div class="small fw-semibold text-teal mb-2">Photo A (Left / First Card)</div>
+                        <label class="form-label small mb-1" for="editQPairALabel">Scene Label (Alt / Report)</label>
+                        <input type="text" class="form-control form-control-sm mb-2" id="editQPairALabel" placeholder="Working with Machinery & Tools" />
+                        <label class="form-label small mb-1" for="editQPairAUrl">Photo Path / URL</label>
+                        <input type="text" class="form-control form-control-sm mb-2" id="editQPairAUrl" placeholder="assets/images/photos/pq-01.jpg" />
+                        <label class="form-label small mb-1" for="editQPairAFallback">Fallback SVG</label>
+                        <input type="text" class="form-control form-control-sm mb-2" id="editQPairAFallback" placeholder="assets/images/careers/engineering.svg" />
+                        <div class="row g-1">
+                          <div class="col-2"><label class="small text-secondary">R</label><input type="number" min="0" max="5" class="form-control form-control-sm font-mono-num" id="editQPairAW_R" value="0" /></div>
+                          <div class="col-2"><label class="small text-secondary">I</label><input type="number" min="0" max="5" class="form-control form-control-sm font-mono-num" id="editQPairAW_I" value="0" /></div>
+                          <div class="col-2"><label class="small text-secondary">A</label><input type="number" min="0" max="5" class="form-control form-control-sm font-mono-num" id="editQPairAW_A" value="0" /></div>
+                          <div class="col-2"><label class="small text-secondary">S</label><input type="number" min="0" max="5" class="form-control form-control-sm font-mono-num" id="editQPairAW_S" value="0" /></div>
+                          <div class="col-2"><label class="small text-secondary">E</label><input type="number" min="0" max="5" class="form-control form-control-sm font-mono-num" id="editQPairAW_E" value="0" /></div>
+                          <div class="col-2"><label class="small text-secondary">C</label><input type="number" min="0" max="5" class="form-control form-control-sm font-mono-num" id="editQPairAW_C" value="0" /></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="p-2 border rounded bg-white">
+                        <div class="small fw-semibold text-primary mb-2">Photo B (Right / Second Card)</div>
+                        <label class="form-label small mb-1" for="editQPairBLabel">Scene Label (Alt / Report)</label>
+                        <input type="text" class="form-control form-control-sm mb-2" id="editQPairBLabel" placeholder="Working in a Science Laboratory" />
+                        <label class="form-label small mb-1" for="editQPairBUrl">Photo Path / URL</label>
+                        <input type="text" class="form-control form-control-sm mb-2" id="editQPairBUrl" placeholder="assets/images/photos/pq-03.jpg" />
+                        <label class="form-label small mb-1" for="editQPairBFallback">Fallback SVG</label>
+                        <input type="text" class="form-control form-control-sm mb-2" id="editQPairBFallback" placeholder="assets/images/careers/laboratory.svg" />
+                        <div class="row g-1">
+                          <div class="col-2"><label class="small text-secondary">R</label><input type="number" min="0" max="5" class="form-control form-control-sm font-mono-num" id="editQPairBW_R" value="0" /></div>
+                          <div class="col-2"><label class="small text-secondary">I</label><input type="number" min="0" max="5" class="form-control form-control-sm font-mono-num" id="editQPairBW_I" value="0" /></div>
+                          <div class="col-2"><label class="small text-secondary">A</label><input type="number" min="0" max="5" class="form-control form-control-sm font-mono-num" id="editQPairBW_A" value="0" /></div>
+                          <div class="col-2"><label class="small text-secondary">S</label><input type="number" min="0" max="5" class="form-control form-control-sm font-mono-num" id="editQPairBW_S" value="0" /></div>
+                          <div class="col-2"><label class="small text-secondary">E</label><input type="number" min="0" max="5" class="form-control form-control-sm font-mono-num" id="editQPairBW_E" value="0" /></div>
+                          <div class="col-2"><label class="small text-secondary">C</label><input type="number" min="0" max="5" class="form-control form-control-sm font-mono-num" id="editQPairBW_C" value="0" /></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12" id="qBaseWeightsWrapper">
                 <label class="form-label">Interest Category Weights (0–3)</label>
                 <div class="row g-2">
                   <div class="col-4 col-md-2"><label class="small text-secondary">Practical (R)</label><input type="number" min="0" max="5" class="form-control form-control-sm font-mono-num" id="editQW_R" value="0" /></div>

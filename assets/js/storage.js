@@ -9,7 +9,7 @@
   'use strict';
 
   const KEYS = {
-    initialized: 'career_compass_initialized_v3',
+    initialized: 'career_compass_initialized_v4',
     tests: 'cc_tests',
     questions: 'cc_questions',
     careers: 'cc_careers',
@@ -24,6 +24,7 @@
   const LEGACY_KEYS = [
     'cgams_initialized_v1',
     'career_compass_initialized_v2',
+    'career_compass_initialized_v3',
     'cgams_tests',
     'cgams_questions',
     'cgams_careers',

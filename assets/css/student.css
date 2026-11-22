@@ -253,6 +253,85 @@
   display: block;
 }
 
+/* Two-Photo Forced-Choice Pair Cards (No Caption Text) */
+.photo-pair-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.15rem;
+}
+
+.photo-pair-card {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 3px solid var(--cc-border-strong);
+  border-radius: var(--cc-radius);
+  background-color: var(--cc-surface-muted);
+  overflow: hidden;
+  cursor: pointer;
+  aspect-ratio: 4 / 3;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+  transition: transform 160ms cubic-bezier(0.16, 1, 0.3, 1), border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.photo-pair-card:hover {
+  border-color: var(--cc-navy);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(15, 37, 71, 0.12);
+}
+
+.photo-pair-card:focus-visible {
+  outline: 3px solid var(--cc-blue);
+  outline-offset: 2px;
+}
+
+.photo-pair-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-pair-card .photo-pair-check {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.92);
+  border: 2px solid rgba(15, 37, 71, 0.25);
+  color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.16);
+  transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease, transform 150ms ease;
+}
+
+.photo-pair-card.selected {
+  border-color: var(--cc-teal);
+  box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.2), 0 12px 26px rgba(13, 148, 136, 0.18);
+  transform: translateY(-2px);
+}
+
+.photo-pair-card.selected .photo-pair-check {
+  background-color: var(--cc-teal);
+  border-color: #ffffff;
+  color: #ffffff;
+  transform: scale(1.06);
+}
+
+.review-thumb-pair {
+  width: 56px;
+  height: 40px;
+  border-radius: 6px;
+  object-fit: cover;
+  border: 1px solid var(--cc-border);
+}
+
 .option-choice-btn {
   width: 100%;
   text-align: left;
@@ -418,6 +497,10 @@
   width: 100%;
 }
 
+.chart-print-img {
+  display: none;
+}
+
 .career-match-bar {
   height: 8px;
   background-color: var(--cc-surface-muted);
@@ -461,7 +544,8 @@
     padding: 2.25rem 0 2.75rem;
   }
 
-  .like-dislike-grid {
+  .like-dislike-grid,
+  .photo-pair-grid {
     grid-template-columns: 1fr;
   }
 
@@ -471,5 +555,78 @@
 
   .question-stage {
     padding: 1.25rem;
+  }
+}
+
+@media print {
+  .report-charts-row {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.22fr) minmax(0, 1fr) !important;
+    gap: 1rem !important;
+    align-items: stretch !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
+  }
+
+  .report-charts-row > * {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  .report-charts-row .cgams-card {
+    height: auto !important;
+    padding: 1rem !important;
+    overflow: hidden !important;
+  }
+
+  .chart-box {
+    height: auto !important;
+    min-height: 0 !important;
+    width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  .chart-box canvas.has-print-snapshot {
+    display: none !important;
+  }
+
+  .chart-box canvas {
+    max-width: 100% !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .chart-print-img {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 220px !important;
+    object-fit: contain !important;
+    margin: 0 auto !important;
+  }
+
+  .report-header-band {
+    padding: 1.35rem !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  #photoChoicesSection > .cgams-card {
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+
+  #photoChoicesGallery > * {
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
 }

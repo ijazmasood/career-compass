@@ -16,12 +16,12 @@
     "title": "Photo Career Quiz",
     "shortTitle": "Photo Career Quiz",
     "category": "Visual Interests",
-    "estimatedMinutes": 10,
-    "questionCount": 21,
+    "estimatedMinutes": 8,
+    "questionCount": 18,
     "active": true,
     "cardImage": "assets/images/test-photo.svg",
-    "description": "Explore careers through pictures. Select the activities and working environments that appeal to you.",
-    "instructions": "Look at each workplace scene and ask yourself: \"How would you feel about doing this type of work?\" Pick Like, Not Sure, or Dislike based on your genuine interest."
+    "description": "Explore careers through side-by-side workplace photos. Pick the photo that appeals to you more in each pair.",
+    "instructions": "Each question shows two workplace scenes side by side. Click the photo representing the activity or environment you would enjoy more, then click Next."
   },
   {
     "id": "career-discovery",
